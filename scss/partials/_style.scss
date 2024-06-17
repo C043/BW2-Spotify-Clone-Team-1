@@ -1,2 +1,48 @@
 @import "./bootstrap-override";
 @import "./circular-font";
+
+body {
+  background-color: black;
+  overflow: hidden;
+  #library-block {
+    height: calc(100vh - 215px);
+    #library-list {
+      overflow-y: scroll;
+      .library-img {
+        width: 60px;
+        height: 60px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  #player {
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+    .library-img {
+      width: 70px;
+      height: 70px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    #play {
+      background-color: white;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #progress-bar {
+      width: 100%;
+      height: 3px;
+      background-color: #a7a7a7;
+    }
+  }
+}
