@@ -12039,6 +12039,12 @@ body #library-block {
 body #library-block #library-list {
   overflow-y: scroll;
 }
+body #library-block #library-list .library-list-item:hover {
+  background-color: #1a1a1a;
+}
+body #library-block #library-list .library-list-item:active {
+  background-color: #232323;
+}
 body #library-block #library-list .library-img {
   width: 60px;
   height: 60px;
@@ -12046,6 +12052,22 @@ body #library-block #library-list .library-img {
 body #library-block #library-list .library-img img {
   width: 100%;
   height: 100%;
+}
+body #song-info-block {
+  overflow-y: scroll;
+  height: calc(100vh - 181px);
+}
+body #song-info-block .song-card .h6 {
+  color: #a7a7a7;
+}
+body #song-info-block .card {
+  width: 100%;
+}
+body #song-info-block .card .card-img-top {
+  position: relative;
+  height: 166px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body #player {
   position: fixed;

@@ -8,6 +8,14 @@ body {
     height: calc(100vh - 215px);
     #library-list {
       overflow-y: scroll;
+      .library-list-item {
+        &:hover {
+          background-color: #1a1a1a;
+        }
+        &:active {
+          background-color: #232323;
+        }
+      }
       .library-img {
         width: 60px;
         height: 60px;
@@ -15,6 +23,23 @@ body {
           width: 100%;
           height: 100%;
         }
+      }
+    }
+  }
+  #song-info-block {
+    overflow-y: scroll;
+    height: calc(100vh - 181px);
+    .song-card {
+      .h6 {
+        color: #a7a7a7;
+      }
+    }
+    .card {
+      width: 100%;
+      .card-img-top {
+        position: relative;
+        height: 166px;
+        object-fit: cover;
       }
     }
   }
