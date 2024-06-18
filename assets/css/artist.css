@@ -12060,6 +12060,24 @@ body #library-block #library-list .library-img img {
   width: 100%;
   height: 100%;
 }
+body #home #nav button {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.7450980392);
+}
+body #home #nav button img {
+  width: 20px;
+  height: 20px;
+}
+body #home #banner {
+  background: linear-gradient(214deg, rgba(67, 12, 16, 0) 0%, rgb(0, 0, 0) 100%);
+}
+body #home #banner .banner-img {
+  width: 200px;
+}
+body #home #banner .banner-img img {
+  width: 100%;
+}
 body #song-info-block {
   overflow-y: scroll;
   height: calc(100vh - 181px);

@@ -35,6 +35,28 @@ body {
       }
     }
   }
+  #home {
+    #nav {
+      button {
+        width: 30px;
+        height: 30px;
+        background-color: #000000be;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    #banner {
+      background: linear-gradient(214deg, rgba(67, 12, 16, 0) 0%, rgba(0, 0, 0, 1) 100%);
+      .banner-img {
+        width: 200px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
   #song-info-block {
     overflow-y: scroll;
     height: calc(100vh - 181px);
