@@ -12125,7 +12125,6 @@ textarea.form-control-lg {
 }
 body {
   background-color: black;
-  overflow: hidden;
 }
 body svg:not(#play svg):hover {
   fill: white;
@@ -12205,6 +12204,7 @@ body #player #progress-bar {
 #home #nav {
   position: sticky;
   top: 0;
+  z-index: 9999;
 }
 #home #nav button {
   width: 30px;
@@ -12228,9 +12228,16 @@ body #player #progress-bar {
 #day {
   font-size: 0.7em;
 }
-#day .day-img {
+#day div {
+  cursor: pointer;
+}
+#day div .day-img {
   width: 60px;
 }
-#day .day-img img {
+#day div .day-img img {
   width: 100%;
+}
+
+#for-you {
+  font-size: 0.7em;
 }/*# sourceMappingURL=home.css.map */

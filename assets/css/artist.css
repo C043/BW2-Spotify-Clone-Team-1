@@ -12125,7 +12125,6 @@ textarea.form-control-lg {
 }
 body {
   background-color: black;
-  overflow: hidden;
 }
 body svg:not(#play svg):hover {
   fill: white;

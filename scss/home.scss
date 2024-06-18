@@ -6,6 +6,7 @@
   #nav {
     position: sticky;
     top: 0;
+    z-index: 9999;
     button {
       width: 30px;
       height: 30px;
@@ -28,10 +29,16 @@
 }
 #day {
   font-size: 0.7em;
-  .day-img {
-    width: 60px;
-    img {
-      width: 100%;
+  div {
+    cursor: pointer;
+    .day-img {
+      width: 60px;
+      img {
+        width: 100%;
+      }
     }
   }
+}
+#for-you {
+  font-size: 0.7em;
 }
