@@ -12033,6 +12033,13 @@ body {
   background-color: black;
   overflow: hidden;
 }
+body svg:not(#play svg):hover {
+  fill: white;
+  cursor: pointer;
+}
+body svg:not(#play svg):active {
+  fill: white;
+}
 body #library-block {
   height: calc(100vh - 215px);
 }

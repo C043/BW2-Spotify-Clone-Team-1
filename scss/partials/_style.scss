@@ -4,6 +4,15 @@
 body {
   background-color: black;
   overflow: hidden;
+  svg:not(#play svg) {
+    &:hover {
+      fill: white;
+      cursor: pointer;
+    }
+    &:active {
+      fill: white;
+    }
+  }
   #library-block {
     height: calc(100vh - 215px);
     #library-list {
