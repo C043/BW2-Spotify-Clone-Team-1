@@ -9,9 +9,19 @@ $gray-300: #ffffff;
 $gray-600: #a7a7a7;
 $blue: #121212;
 $info: #2a2929;
+$card-bg: rgba(0, 0, 0, 0);
 
 @import "../../bootstrap/scss/_variables";
 @import "../../bootstrap/scss/_variables-dark";
+
+$more-colors: (
+  "invisible": rgba(0, 0, 0, 0),
+);
+
+$theme-colors: map-merge(
+  $map1: $theme-colors,
+  $map2: $more-colors,
+);
 
 /* Override map */
 
