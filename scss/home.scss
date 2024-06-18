@@ -2,8 +2,9 @@
 
 #home {
   overflow-y: scroll;
-  height: calc(100vh - 112px);
+  height: calc(100vh - 200px);
   #nav {
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 9999;
@@ -26,19 +27,41 @@
       }
     }
   }
-}
-#day {
-  font-size: 0.7em;
-  div {
-    cursor: pointer;
-    .day-img {
-      width: 60px;
-      img {
-        width: 100%;
+  #day {
+    font-size: 0.7em;
+    div {
+      cursor: pointer;
+      .day-img {
+        width: 60px;
+        img {
+          width: 100%;
+        }
       }
     }
   }
-}
-#for-you {
-  font-size: 0.7em;
+  section {
+    .col-md-6:not(#day .col-md-6) {
+      &:hover {
+        background-color: #2a2929;
+        cursor: pointer;
+      }
+    }
+  }
+  #footer {
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background-color: #2a2929;
+      border-radius: 50%;
+      aspect-ratio: 1;
+      svg {
+        width: 15px;
+        height: 15px;
+        fill: white;
+      }
+    }
+  }
 }

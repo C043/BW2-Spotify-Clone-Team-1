@@ -12199,9 +12199,10 @@ body #player #progress-bar {
 
 #home {
   overflow-y: scroll;
-  height: calc(100vh - 112px);
+  height: calc(100vh - 200px);
 }
 #home #nav {
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 9999;
@@ -12224,20 +12225,34 @@ body #player #progress-bar {
 #home #banner .banner-img img {
   width: 100%;
 }
-
-#day {
+#home #day {
   font-size: 0.7em;
 }
-#day div {
+#home #day div {
   cursor: pointer;
 }
-#day div .day-img {
+#home #day div .day-img {
   width: 60px;
 }
-#day div .day-img img {
+#home #day div .day-img img {
   width: 100%;
 }
-
-#for-you {
-  font-size: 0.7em;
+#home section .col-md-6:not(#day .col-md-6):hover {
+  background-color: #2a2929;
+  cursor: pointer;
+}
+#home #footer .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #2a2929;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+#home #footer .social svg {
+  width: 15px;
+  height: 15px;
+  fill: white;
 }/*# sourceMappingURL=home.css.map */
