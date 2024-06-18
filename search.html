@@ -6,12 +6,16 @@
     <title>Spotify - Web Player: Music for everyone</title>
     <link rel="stylesheet" href="./assets/dist/css/search.min.css" />
     <style>
+      .container-scroll {
+        height: 100vh;
+        overflow-y: auto;
+      }
       .musica-card {
         background-color: #e91e63;
         border: none;
         color: white;
-        width: 245px;
-        height: 145px;
+        width: 100%;
+        height: 130px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -35,10 +39,10 @@
         position: absolute;
         bottom: 1px;
         right: -18px;
-        width: 110px;
-        height: 110px;
+        width: 105px;
+        height: 105px;
         transform: rotate(20deg);
-        border-radius: 10px;
+        border-radius: 5px;
         box-shadow: -3px 5px 13px -1px rgba(0, 0, 0, 0.41);
       }
     </style>
@@ -499,28 +503,121 @@
               <div></div>
             </header>
             <main>
-              <h1 class="fs-3 fw-bold mt-5">Sfoglia tutto</h1>
-              <div class="container">
-                <div class="row">
-                  <div class="col-3">
-                    <div class="card musica-card rounded">
-                      <div class="card-body">
-                        <h5 class="card-title">Musica</h5>
-                        <img
-                          src="./assets/imgs/search/image-1.jpeg"
-                          class="card-img"
-                          alt="Image"
-                        />
+              <div class="container-scroll">
+                <div class="container">
+                  <h1 class="fs-3 fw-bold mt-5">Sfoglia tutto</h1>
+                  <div class="row">
+                    <div class="col-4 mt-4">
+                      <div class="card musica-card rounded">
+                        <div class="card-body">
+                          <h5 class="card-title fs-5 fw-bold">Music</h5>
+                          <img
+                            src="./assets/imgs/search/image-1.jpeg"
+                            class="card-img"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 mt-4">
+                      <div class="card musica-card rounded">
+                        <div class="card-body">
+                          <h5 class="card-title fs-5 fw-bold">New releases</h5>
+                          <img
+                            src="./assets/imgs/search/image-2.jpg"
+                            class="card-img"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 mt-4">
+                      <div class="card musica-card rounded">
+                        <div class="card-body">
+                          <h5 class="card-title fs-5 fw-bold">Mood</h5>
+                          <img
+                            src="./assets/imgs/search/image-3.jpg"
+                            class="card-img"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 mt-4">
+                      <div class="card musica-card rounded">
+                        <div class="card-body">
+                          <h5 class="card-title fs-5 fw-bold">Made for you</h5>
+                          <img
+                            src="./assets/imgs/search/image-4.jpg"
+                            class="card-img"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 mt-4">
+                      <div class="card musica-card rounded">
+                        <div class="card-body">
+                          <h5 class="card-title fs-5 fw-bold">Latin</h5>
+                          <img
+                            src="./assets/imgs/search/image-5.jpg"
+                            class="card-img"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 mt-4">
+                      <div class="card musica-card rounded">
+                        <div class="card-body">
+                          <h5 class="card-title fs-5 fw-bold">
+                            Dance/ <br />Electronic
+                          </h5>
+                          <img
+                            src="./assets/imgs/search/image-6.jpg"
+                            class="card-img"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 mt-4">
+                      <div class="card musica-card rounded">
+                        <div class="card-body">
+                          <h5 class="card-title fs-5 fw-bold">Rock</h5>
+                          <img
+                            src="./assets/imgs/search/image-7.jpg"
+                            class="card-img"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 mt-4">
+                      <div class="card musica-card rounded">
+                        <div class="card-body">
+                          <h5 class="card-title fs-5 fw-bold">Training</h5>
+                          <img
+                            src="./assets/imgs/search/image-8.jpg"
+                            class="card-img"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 mt-4">
+                      <div class="card musica-card rounded">
+                        <div class="card-body">
+                          <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                          <img
+                            src="./assets/imgs/search/image-9.jpg"
+                            class="card-img"
+                            alt="Image"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
                 </div>
               </div>
             </main>
@@ -595,7 +692,7 @@
                       About the artist
                     </p>
                     <div class="card-body bg-info rounded-3">
-                      <h5 class="card-title">Artista</h5>
+                      <h5 class="card-title fs-5 fw-bolder">Artista</h5>
                       <div class="d-flex align-items-center">
                         <p class="text-secondary mb-0">
                           111,963 monthly listeners
