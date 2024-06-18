@@ -5,7 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Spotify - Web Player: Music for everyone</title>
     <link rel="stylesheet" href="./assets/dist/css/search.min.css" />
-    <style></style>
+    <style>
+      .musica-card {
+        background-color: #e91e63;
+        border: none;
+        color: white;
+        width: 245px;
+        height: 145px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card-body {
+        text-align: left;
+        padding: 1rem;
+        width: 100%;
+        height: 100%;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      .card-img {
+        position: absolute;
+        bottom: 1px;
+        right: -18px;
+        width: 110px;
+        height: 110px;
+        transform: rotate(20deg);
+        border-radius: 10px;
+        box-shadow: -3px 5px 13px -1px rgba(0, 0, 0, 0.41);
+      }
+    </style>
   </head>
   <body data-bs-theme="dark">
     <main>
@@ -462,6 +498,32 @@
               </div>
               <div></div>
             </header>
+            <main>
+              <h1 class="fs-3 fw-bold mt-5">Sfoglia tutto</h1>
+              <div class="container">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="card musica-card rounded">
+                      <div class="card-body">
+                        <h5 class="card-title">Musica</h5>
+                        <img
+                          src="./assets/imgs/search/image-1.jpeg"
+                          class="card-img"
+                          alt="Image"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3"></div>
+                  <div class="col-3"></div>
+                  <div class="col-3"></div>
+                  <div class="col-3"></div>
+                  <div class="col-3"></div>
+                  <div class="col-3"></div>
+                  <div class="col-3"></div>
+                </div>
+              </div>
+            </main>
           </div>
           <aside class="col-md-3">
             <div class="d-flex flex-column rounded-3 bg-primary mt-2">
