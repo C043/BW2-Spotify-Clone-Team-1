@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/dist/css/search.min.css" />
     <style>
       .container-scroll {
-        height: calc(100vh - 60px);
+        height: calc(100vh - 150px);
         overflow-y: auto;
       }
       .musica-card {
@@ -44,6 +44,39 @@
         transform: rotate(20deg);
         border-radius: 5px;
         box-shadow: -3px 5px 13px -1px rgba(0, 0, 0, 0.41);
+      }
+      .search-form {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: #333;
+        border-radius: 50px;
+        padding: 5px 20px;
+        width: 100%;
+        min-width: 300px;
+      }
+
+      .search-icon {
+        fill: #fff;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 10px;
+      }
+
+      .search-input {
+        flex-grow: 1;
+        border: none;
+        outline: none;
+        background: none;
+        color: white;
+        padding-left: 20px;
+        font-size: 16px;
+      }
+      @media (max-width: 768px) {
+        .search-form {
+          max-width: 100%;
+        }
       }
     </style>
   </head>
@@ -411,72 +444,86 @@
           </aside>
           <div class="col-md-6">
             <header>
-              <div class="d-flex justify-content-between">
-                <div class="d-flex">
+              <div>
+                <div class="d-flex justify-content-between pt-3">
+                  <div class="d-flex">
+                    <div class="d-flex align-items-center">
+                      <svg
+                        fill="white"
+                        height="15px"
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        class="pe-3"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"
+                        ></path>
+                      </svg>
+                      <svg
+                        fill="white"
+                        height="15px"
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        class="pe-3"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <form role="search" class="search-form">
+                      <svg
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        class="Svg-sc-ytk21e-0 bneLcE search-icon QbaKKdcHNA2x3_YJvpYu"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                        ></path></svg
+                      ><input
+                        class="search-input rounded-pill border-0 py-2"
+                        data-encore-id="text"
+                        style="color: white"
+                        maxlength="800"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        placeholder="Cosa vuoi ascoltare?"
+                        data-testid="search-input"
+                        value=""
+                      />
+                    </form>
+                  </div>
+
                   <div class="d-flex align-items-center">
-                    <svg
-                      fill="white"
-                      height="15px"
-                      data-encore-id="icon"
-                      role="img"
-                      aria-hidden="true"
-                      class="pe-3"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"
-                      ></path>
-                    </svg>
-                    <svg
-                      fill="white"
-                      height="15px"
-                      data-encore-id="icon"
-                      role="img"
-                      aria-hidden="true"
-                      class="pe-3"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <form role="search">
-                    <input
-                      class="rounded-pill border-0 py-2"
-                      data-encore-id="text"
-                      style="color: white"
-                      maxlength="800"
-                      autocorrect="off"
-                      autocapitalize="none"
-                      spellcheck="false"
-                      placeholder="Cosa vuoi ascoltare?"
-                      data-testid="search-input"
-                      value=""
-                    />
-                  </form>
-                </div>
-                <div class="d-flex">
-                  <div class="d-flex">
-                    <svg
-                      fill="white"
-                      height="15px"
-                      data-encore-id="icon"
-                      role="img"
-                      aria-hidden="true"
-                      viewBox="0 0 16 16"
-                      class="Svg-sc-ytk21e-0 dYnaPI"
-                    >
-                      <path
-                        d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528a.945.945 0 0 1-.005-.005L4.995 9.805a.75.75 0 0 1 0-1.06z"
-                      ></path>
-                      <path
-                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z"
-                      ></path>
-                    </svg>
-                    <p class="ps-2 me-5 fw-semibold">Installa App</p>
-                  </div>
-                  <div class="d-flex">
+                    <div>
+                      <svg
+                        fill="white"
+                        height="15px"
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        viewBox="0 0 16 16"
+                        class="Svg-sc-ytk21e-0 dYnaPI"
+                      >
+                        <path
+                          d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528a.945.945 0 0 1-.005-.005L4.995 9.805a.75.75 0 0 1 0-1.06z"
+                        ></path>
+                        <path
+                          d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="ps-2 me-5 fw-semibold my-auto">Installa App</p>
+                    </div>
+
                     <svg
                       fill="white"
                       height="15px"
@@ -496,11 +543,9 @@
                     >
                       K
                     </div>
-                    <!-- inserire in questo div -->
                   </div>
                 </div>
               </div>
-              <div></div>
             </header>
             <main class="container-scroll">
               <div class="container">
@@ -799,22 +844,11 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
-                        <img
-                          src="./assets/imgs/search/image-25.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-4 mt-4">
-                    <div class="card musica-card rounded">
-                      <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Daily</h5>
                         <img
                           src="./assets/imgs/search/image-26.jpg"
                           class="card-img"
@@ -826,7 +860,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Party hits</h5>
+                        <h5 class="card-title fs-5 fw-bold">Party Hits</h5>
                         <img
                           src="./assets/imgs/search/image-27.jpg"
                           class="card-img"
@@ -838,7 +872,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Afro</h5>
                         <img
                           src="./assets/imgs/search/image-28.jpg"
                           class="card-img"
@@ -850,7 +884,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Classic</h5>
                         <img
                           src="./assets/imgs/search/image-29.jpg"
                           class="card-img"
@@ -862,7 +896,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Gaming</h5>
                         <img
                           src="./assets/imgs/search/image-30.jpg"
                           class="card-img"
@@ -874,7 +908,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Metal</h5>
                         <img
                           src="./assets/imgs/search/image-31.jpg"
                           class="card-img"
@@ -886,7 +920,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Funk</h5>
                         <img
                           src="./assets/imgs/search/image-32.jpg"
                           class="card-img"
@@ -898,7 +932,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Punk</h5>
                         <img
                           src="./assets/imgs/search/image-33.jpg"
                           class="card-img"
@@ -910,7 +944,9 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">
+                          Ambient <br />Essential
+                        </h5>
                         <img
                           src="./assets/imgs/search/image-34.jpg"
                           class="card-img"
@@ -922,7 +958,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Blues</h5>
                         <img
                           src="./assets/imgs/search/image-35.jpg"
                           class="card-img"
@@ -934,7 +970,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Blues</h5>
                         <img
                           src="./assets/imgs/search/image-36.jpg"
                           class="card-img"
@@ -946,7 +982,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">New Podcasts</h5>
                         <img
                           src="./assets/imgs/search/image-37.jpeg"
                           class="card-img"
@@ -958,7 +994,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Country</h5>
                         <img
                           src="./assets/imgs/search/image-39.jpg"
                           class="card-img"
@@ -970,7 +1006,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Alternative</h5>
                         <img
                           src="./assets/imgs/search/image-40.jpg"
                           class="card-img"
@@ -982,7 +1018,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Arab Pop</h5>
                         <img
                           src="./assets/imgs/search/image-41.jpg"
                           class="card-img"
@@ -994,7 +1030,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Pop Mix</h5>
                         <img
                           src="./assets/imgs/search/image-42.png"
                           class="card-img"
@@ -1006,7 +1042,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Radar</h5>
                         <img
                           src="./assets/imgs/search/image-43.png"
                           class="card-img"
@@ -1018,7 +1054,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Pop 4 Kids</h5>
                         <img
                           src="./assets/imgs/search/image-44.png"
                           class="card-img"
@@ -1030,7 +1066,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Road Trip</h5>
                         <img
                           src="./assets/imgs/search/image-45.png"
                           class="card-img"
@@ -1042,7 +1078,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Tastemaker</h5>
                         <img
                           src="./assets/imgs/search/image-46.jpeg"
                           class="card-img"
@@ -1054,7 +1090,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Today Hits</h5>
                         <img
                           src="./assets/imgs/search/image-47.jpg"
                           class="card-img"
@@ -1078,7 +1114,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Hip-Hop</h5>
                         <img
                           src="./assets/imgs/search/image-49.jpg"
                           class="card-img"
@@ -1090,7 +1126,9 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">
+                          Ner Rock <br />Releases
+                        </h5>
                         <img
                           src="./assets/imgs/search/image-50.jpg"
                           class="card-img"
