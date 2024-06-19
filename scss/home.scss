@@ -43,8 +43,31 @@
   }
   section {
     .artist-main {
+      cursor: pointer;
       img {
         border-radius: 50%;
+      }
+      .artist-title {
+        cursor: pointer;
+      }
+    }
+    .album-main {
+      cursor: pointer;
+      .album-title {
+        h5 {
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+        p {
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+
+        cursor: pointer;
       }
     }
     .col-md-6:not(#day .col-md-6) {

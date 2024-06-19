@@ -12291,8 +12291,28 @@ body #mobile-nav svg {
 #home #day div .day-img img {
   width: 100%;
 }
+#home section .artist-main {
+  cursor: pointer;
+}
 #home section .artist-main img {
   border-radius: 50%;
+}
+#home section .artist-main .artist-title {
+  cursor: pointer;
+}
+#home section .album-main {
+  cursor: pointer;
+}
+#home section .album-main .album-title {
+  cursor: pointer;
+}
+#home section .album-main .album-title h5:hover, #home section .album-main .album-title .h5:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+#home section .album-main .album-title p:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 #home section .col-md-6:not(#day .col-md-6):hover {
   background-color: #2a2929;

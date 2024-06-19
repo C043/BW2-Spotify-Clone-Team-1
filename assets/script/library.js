@@ -23,11 +23,15 @@ const domManipulation = async id => {
   const sectionTitle = document.querySelector(`#${id} h2`);
   sectionTitle.innerText = data.artist.name;
 
-  const artistTile = document.querySelector(`#${id} .artist-main img`);
+  const artistCard = document.querySelector(`#${id} .artist-main`);
+  const artistImg = document.querySelector(`#${id} .artist-main img`);
   const artistTitle = document.querySelector(`#${id} .artist-title h5`);
   artistTitle.innerText = data.artist.name;
-  artistTile.src = data.artist.picture;
-  artistTile.alt = data.artist.name;
+  artistImg.src = data.artist.picture;
+  artistImg.alt = data.artist.name;
+  artistCard.onclick = function () {
+    window.location.replace("./artist.html?artistId=" + data.artist.id);
+  };
 
   const albums = document.querySelectorAll(`#${id} .album-main img`);
   const albumTitles = document.querySelectorAll(`#${id} .album-title h5`);
@@ -37,12 +41,23 @@ const domManipulation = async id => {
     const currentElement = obj.data[x];
     for (let i = 0; i < albums.length; i++) {
       const currentAlbum = albums[x];
-      const titles = albumTitles[x];
+      const title = albumTitles[x];
       const artist = albumTileName[x];
       currentAlbum.src = currentElement.album.cover;
+      currentAlbum.onclick = function () {
+        window.location.replace("./album.html?albumId=" + currentElement.album.id);
+      };
+
       currentAlbum.alt = currentElement.album.title;
-      titles.innerText = currentElement.album.title;
+      title.innerText = currentElement.album.title;
+      title.onclick = function () {
+        window.location.replace("./album.html?albumId=" + currentElement.album.id);
+      };
+
       artist.innerText = currentElement.artist.name;
+      artist.onclick = function () {
+        window.location.replace("./artist.html?artistId=" + currentElement.artist.id);
+      };
     }
   }
 };
