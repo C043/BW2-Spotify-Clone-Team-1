@@ -15,6 +15,16 @@ $info: #2a2929;
 
 /* Override map */
 
+/* aggiunto nuovi font-size (fs-7,fs-8 ecc..) */
+$custom-font-size: (
+  7: 0.9rem,
+  8: 0.8rem,
+  9: 0.7rem,
+  10: 0.6rem,
+);
+
+$font-sizes: map-merge($font-sizes, $custom-font-size);
+
 @import "../../bootstrap/scss/_maps";
 @import "../../bootstrap/scss/_mixins";
 @import "../../bootstrap/scss/_utilities";
