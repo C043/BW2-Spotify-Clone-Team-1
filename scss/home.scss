@@ -42,6 +42,11 @@
     }
   }
   section {
+    .artist-main {
+      img {
+        border-radius: 50%;
+      }
+    }
     .col-md-6:not(#day .col-md-6) {
       &:hover {
         background-color: #2a2929;
