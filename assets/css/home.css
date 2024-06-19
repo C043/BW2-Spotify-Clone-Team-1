@@ -12125,6 +12125,7 @@ textarea.form-control-lg {
 }
 body {
   background-color: black;
+  overflow: hidden;
 }
 body .active {
   fill: white;
@@ -12141,7 +12142,7 @@ body svg:not(#play svg, .active):active {
   fill: white;
 }
 body #library-block {
-  height: calc(100vh - 215px);
+  height: calc(100vh - 224px);
 }
 body #library-block #library-list {
   overflow-y: scroll;
@@ -12162,7 +12163,7 @@ body #library-block #library-list .library-img img {
 }
 body #song-info-block {
   overflow-y: scroll;
-  height: calc(100vh - 168px);
+  height: calc(100vh - 120px);
 }
 body #song-info-block .song-card .h6 {
   color: #a7a7a7;
@@ -12177,7 +12178,7 @@ body #song-info-block .card .card-img-top {
      object-fit: cover;
 }
 body #player {
-  position: fixed;
+  position: sticky;
   bottom: 0;
   background-color: black;
   width: 100%;
@@ -12220,7 +12221,7 @@ body #player #volume-progress-bar {
 }
 body #mobile-nav {
   width: 100%;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   background-color: black;
   z-index: 9999;
@@ -12249,7 +12250,12 @@ body #mobile-nav svg {
 
 #home {
   overflow-y: scroll;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 120px);
+}
+@media (max-width: 768px) {
+  #home {
+    height: calc(100vh - 180px);
+  }
 }
 #home #nav {
   width: 100%;

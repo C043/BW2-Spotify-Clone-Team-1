@@ -2,7 +2,10 @@
 
 #home {
   overflow-y: scroll;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 120px);
+  @media (max-width: 768px) {
+    height: calc(100vh - 180px);
+  }
   #nav {
     width: 100%;
     position: sticky;

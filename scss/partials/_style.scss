@@ -3,6 +3,7 @@
 
 body {
   background-color: black;
+  overflow: hidden;
   .active {
     fill: white;
     color: white;
@@ -19,7 +20,7 @@ body {
     }
   }
   #library-block {
-    height: calc(100vh - 215px);
+    height: calc(100vh - 224px);
     #library-list {
       overflow-y: scroll;
       .library-list-item {
@@ -42,7 +43,7 @@ body {
   }
   #song-info-block {
     overflow-y: scroll;
-    height: calc(100vh - 168px);
+    height: calc(100vh - 120px);
     .song-card {
       .h6 {
         color: #a7a7a7;
@@ -58,7 +59,7 @@ body {
     }
   }
   #player {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     background-color: black;
     width: 100%;
@@ -97,7 +98,7 @@ body {
   }
   #mobile-nav {
     width: 100%;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     background-color: black;
     z-index: 9999;
