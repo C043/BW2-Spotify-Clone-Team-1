@@ -72,8 +72,19 @@ body {
       justify-content: center;
       align-items: center;
     }
-    #progress-bar {
-      width: 100%;
+    #song-progress-bar {
+      width: 500px;
+      height: 3px;
+      background-color: #a7a7a7;
+      @media (max-width: 1195px) {
+        width: 400px;
+      }
+      @media (max-width: 927px) {
+        width: 256px;
+      }
+    }
+    #volume-progress-bar {
+      width: 100px;
       height: 3px;
       background-color: #a7a7a7;
     }

@@ -12191,8 +12191,23 @@ body #player #play {
   justify-content: center;
   align-items: center;
 }
-body #player #progress-bar {
-  width: 100%;
+body #player #song-progress-bar {
+  width: 500px;
+  height: 3px;
+  background-color: #a7a7a7;
+}
+@media (max-width: 1195px) {
+  body #player #song-progress-bar {
+    width: 400px;
+  }
+}
+@media (max-width: 927px) {
+  body #player #song-progress-bar {
+    width: 256px;
+  }
+}
+body #player #volume-progress-bar {
+  width: 100px;
   height: 3px;
   background-color: #a7a7a7;
 }
