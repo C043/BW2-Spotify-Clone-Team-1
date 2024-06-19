@@ -3,7 +3,13 @@
 
 body {
   background-color: black;
-  svg:not(#play svg) {
+  .active {
+    fill: white;
+    color: white;
+  }
+
+  svg:not(#play svg, .active) {
+    fill: #a7a7a7;
     &:hover {
       fill: white;
       cursor: pointer;
@@ -72,7 +78,7 @@ body {
       justify-content: center;
       align-items: center;
     }
-    #song-progress-bar {
+    .song-progress-bar {
       width: 500px;
       height: 3px;
       background-color: #a7a7a7;
@@ -87,6 +93,35 @@ body {
       width: 100px;
       height: 3px;
       background-color: #a7a7a7;
+    }
+  }
+  #mobile-nav {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    z-index: 9999;
+    #mobile-player {
+      height: 75px;
+      background-color: #232323;
+      .library-img {
+        img {
+          height: 50px;
+          width: 50px;
+          object-fit: cover;
+        }
+      }
+      .song-progress-bar {
+        max-width: 100%;
+        right: 10px;
+        left: 10px;
+        height: 3px;
+        background-color: #a7a7a7;
+      }
+    }
+    svg {
+      width: 25px;
+      height: 25px;
     }
   }
 }

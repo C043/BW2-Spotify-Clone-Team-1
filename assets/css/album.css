@@ -12126,11 +12126,18 @@ textarea.form-control-lg {
 body {
   background-color: black;
 }
-body svg:not(#play svg):hover {
+body .active {
+  fill: white;
+  color: white;
+}
+body svg:not(#play svg, .active) {
+  fill: #a7a7a7;
+}
+body svg:not(#play svg, .active):hover {
   fill: white;
   cursor: pointer;
 }
-body svg:not(#play svg):active {
+body svg:not(#play svg, .active):active {
   fill: white;
 }
 body #library-block {
@@ -12191,18 +12198,18 @@ body #player #play {
   justify-content: center;
   align-items: center;
 }
-body #player #song-progress-bar {
+body #player .song-progress-bar {
   width: 500px;
   height: 3px;
   background-color: #a7a7a7;
 }
 @media (max-width: 1195px) {
-  body #player #song-progress-bar {
+  body #player .song-progress-bar {
     width: 400px;
   }
 }
 @media (max-width: 927px) {
-  body #player #song-progress-bar {
+  body #player .song-progress-bar {
     width: 256px;
   }
 }
@@ -12210,4 +12217,32 @@ body #player #volume-progress-bar {
   width: 100px;
   height: 3px;
   background-color: #a7a7a7;
+}
+body #mobile-nav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  z-index: 9999;
+}
+body #mobile-nav #mobile-player {
+  height: 75px;
+  background-color: #232323;
+}
+body #mobile-nav #mobile-player .library-img img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #mobile-nav #mobile-player .song-progress-bar {
+  max-width: 100%;
+  right: 10px;
+  left: 10px;
+  height: 3px;
+  background-color: #a7a7a7;
+}
+body #mobile-nav svg {
+  width: 25px;
+  height: 25px;
 }/*# sourceMappingURL=album.css.map */
