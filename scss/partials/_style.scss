@@ -9,6 +9,10 @@ body {
     color: white;
   }
 
+  .scrollable {
+    overflow-y: scroll;
+  }
+
   svg:not(#play svg, .active) {
     fill: #a7a7a7;
     &:hover {
@@ -22,7 +26,6 @@ body {
   #library-block {
     height: calc(100vh - 224px);
     #library-list {
-      overflow-y: scroll;
       .library-list-item {
         &:hover {
           background-color: #1a1a1a;
@@ -42,7 +45,6 @@ body {
     }
   }
   #song-info-block {
-    overflow-y: scroll;
     height: calc(100vh - 120px);
     .song-card {
       .h6 {

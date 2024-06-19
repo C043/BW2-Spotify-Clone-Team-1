@@ -12131,6 +12131,9 @@ body .active {
   fill: white;
   color: white;
 }
+body .scrollable {
+  overflow-y: scroll;
+}
 body svg:not(#play svg, .active) {
   fill: #a7a7a7;
 }
@@ -12143,9 +12146,6 @@ body svg:not(#play svg, .active):active {
 }
 body #library-block {
   height: calc(100vh - 224px);
-}
-body #library-block #library-list {
-  overflow-y: scroll;
 }
 body #library-block #library-list .library-list-item:hover {
   background-color: #1a1a1a;
@@ -12162,7 +12162,6 @@ body #library-block #library-list .library-img img {
   height: 100%;
 }
 body #song-info-block {
-  overflow-y: scroll;
   height: calc(100vh - 120px);
 }
 body #song-info-block .song-card .h6 {
@@ -12249,7 +12248,6 @@ body #mobile-nav svg {
 }
 
 #home {
-  overflow-y: scroll;
   height: calc(100vh - 120px);
 }
 @media (max-width: 768px) {
