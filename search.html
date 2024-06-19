@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/dist/css/search.min.css" />
     <style>
       .container-scroll {
-        height: calc(100vh - 150px);
+        height: calc(100vh - 170px);
         overflow-y: auto;
       }
       .musica-card {
@@ -73,6 +73,23 @@
         padding-left: 20px;
         font-size: 16px;
       }
+      .search-form:focus-within {
+        border: 2px solid white;
+      }
+      .icon-container {
+        transition: transform 0.2s;
+        cursor: pointer;
+      }
+
+      .icon-container:hover {
+        transform: scale(1.1);
+      }
+
+      .icon-container:hover svg,
+      .icon-container:hover div {
+        cursor: pointer;
+      }
+
       @media (max-width: 768px) {
         .search-form {
           max-width: 100%;
@@ -502,7 +519,7 @@
                   </div>
 
                   <div class="d-flex align-items-center">
-                    <div>
+                    <div class="d-flex icon-container align-items-center">
                       <svg
                         fill="white"
                         height="15px"
@@ -519,9 +536,12 @@
                           d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z"
                         ></path>
                       </svg>
-                    </div>
-                    <div>
-                      <p class="ps-2 me-5 fw-semibold my-auto">Installa App</p>
+
+                      <div>
+                        <p class="ps-2 me-5 fw-semibold my-auto">
+                          Installa App
+                        </p>
+                      </div>
                     </div>
 
                     <svg
@@ -531,14 +551,14 @@
                       role="img"
                       aria-hidden="true"
                       viewBox="0 0 16 16"
-                      class="me-3"
+                      class="me-3 icon-container"
                     >
                       <path
                         d="M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z"
                       ></path>
                     </svg>
                     <div
-                      class="bg-success text-white rounded-circle d-flex justify-content-center align-items-center"
+                      class="bg-success text-white rounded-circle d-flex justify-content-center align-items-center icon-container"
                       style="width: 30px; height: 30px; font-size: 15px"
                     >
                       K
@@ -700,7 +720,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Summer</h5>
+                        <h5 class="card-title fs-5 fw-bold">Summer Hits</h5>
                         <img
                           src="./assets/imgs/search/image-13.jpeg"
                           class="card-img"
@@ -775,7 +795,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">K-Pop</h5>
+                        <h5 class="card-title fs-5 fw-bold">Caraibi</h5>
                         <img
                           src="./assets/imgs/search/image-19.jpg"
                           class="card-img"
@@ -958,7 +978,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Blues</h5>
+                        <h5 class="card-title fs-5 fw-bold">K-Pop</h5>
                         <img
                           src="./assets/imgs/search/image-35.jpg"
                           class="card-img"
@@ -1127,7 +1147,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">
-                          Ner Rock <br />Releases
+                          New Rock <br />Releases
                         </h5>
                         <img
                           src="./assets/imgs/search/image-50.jpg"
@@ -1140,7 +1160,7 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">Relax</h5>
                         <img
                           src="./assets/imgs/search/image-51.jpg"
                           class="card-img"
@@ -1152,7 +1172,10 @@
                   <div class="col-4 mt-4">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
+                        <h5 class="card-title fs-5 fw-bold">
+                          Top Gaming <br />
+                          Tracks
+                        </h5>
                         <img
                           src="./assets/imgs/search/image-52.jpg"
                           class="card-img"
@@ -1579,8 +1602,8 @@
           "#b02897",
           "#ba5d07",
           "#2d46b9",
-          "#57FF33",
-          "#3385FF",
+          "#8bd975",
+          "#9ec0ff",
           "#8C33FF",
         ];
 
