@@ -12159,6 +12159,13 @@ body #library-list .library-list-item:hover {
 body #library-list .library-list-item:active {
   background-color: #232323;
 }
+body #library-list .library-list-item a {
+  text-decoration: none;
+}
+body #library-list .library-list-item a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 body #library-list .library-img {
   width: 60px;
   height: 60px;

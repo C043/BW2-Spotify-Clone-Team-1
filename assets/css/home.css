@@ -12159,6 +12159,13 @@ body #library-list .library-list-item:hover {
 body #library-list .library-list-item:active {
   background-color: #232323;
 }
+body #library-list .library-list-item a {
+  text-decoration: none;
+}
+body #library-list .library-list-item a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 body #library-list .library-img {
   width: 60px;
   height: 60px;
@@ -12364,6 +12371,13 @@ body #mobile-nav svg {
 .line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }/*# sourceMappingURL=home.css.map */

@@ -1,5 +1,6 @@
 import { token } from "./token.js";
 
+/* fetch search */
 const get = async artist => {
   try {
     const response = await fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=" + artist, {
@@ -15,6 +16,7 @@ const get = async artist => {
   }
 };
 
+/* generatore di sezioni */
 const sectionGen = async id => {
   const obj = await get(id);
   const data = await obj.data[0];
@@ -129,6 +131,7 @@ const sectionGen = async id => {
   main.append(section);
 };
 
+/* manipolazione del banner */
 const bannerManipulation = async id => {
   const obj = await get(id);
   const data = await obj.data[0];

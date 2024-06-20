@@ -42,6 +42,13 @@ body {
       &:active {
         background-color: #232323;
       }
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
     }
     .library-img {
       width: 60px;
