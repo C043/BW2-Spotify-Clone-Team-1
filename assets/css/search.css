@@ -12119,4 +12119,111 @@ body #player #progress-bar {
   width: 100%;
   height: 3px;
   background-color: #a7a7a7;
+}
+
+header {
+  padding-bottom: 10px;
+}
+
+.container-scroll {
+  height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+
+.musica-card {
+  background-color: #e91e63;
+  border: none;
+  color: white;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.musica-card .card-body {
+  text-align: left;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.musica-card .card-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+.musica-card .card-img {
+  position: absolute;
+  bottom: 1px;
+  right: -18px;
+  width: 105px;
+  height: 105px;
+  transform: rotate(20deg);
+  border-radius: 5px;
+  box-shadow: -3px 5px 13px -1px rgba(0, 0, 0, 0.41);
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 50px;
+  padding: 5px 20px;
+  width: 100%;
+  min-width: 300px;
+}
+.search-form .search-icon {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+}
+.search-form .search-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  padding-left: 20px;
+  font-size: 16px;
+}
+.search-form:focus-within {
+  border: 2px solid white;
+}
+
+.icon-container {
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.icon-container:hover {
+  transform: scale(1.1);
+}
+.icon-container:hover svg,
+.icon-container:hover div {
+  cursor: pointer;
+}
+
+#popularSong li:hover {
+  background-color: #242424;
+}
+#popularSong li:hover h2, #popularSong li:hover .h2 {
+  color: var(--bs-secondary);
+}
+
+#artistCard {
+  background-color: #181818;
+}
+#artistCard:hover {
+  background-color: #242424;
+}
+#artistCard img {
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=search.css.map */
