@@ -12340,7 +12340,7 @@ body #mobile-nav svg {
   fill: white;
 }
 
-.line-clamp h5, .line-clamp .h5 {
+.line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;

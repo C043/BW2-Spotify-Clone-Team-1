@@ -20,60 +20,118 @@ const domManipulation = async id => {
   const data = await obj.data[0];
   console.log(obj);
 
-  const sectionTitle = document.querySelector(`#${id} h2`);
-  sectionTitle.innerText = data.artist.name;
+  const main = document.getElementById("main");
 
-  const artistCard = document.querySelector(`#${id} .artist-main`);
-  const artistImg = document.querySelector(`#${id} .artist-main img`);
-  const artistTitle = document.querySelector(`#${id} .artist-title h5`);
-  artistTitle.innerText = data.artist.name;
-  artistImg.src = data.artist.picture;
-  artistImg.alt = data.artist.name;
+  const section = document.createElement("section");
+  section.id = id;
+  section.className = "row";
+
+  const sectionHeaderCon = document.createElement("div");
+  sectionHeaderCon.className = "col-12 d-flex align-items-center mb-3";
+
+  const header = document.createElement("h2");
+  header.className = "h3";
+  header.innerText = data.artist.name;
+
+  const showAll = document.createElement("a");
+  showAll.className = "text-secondary link-underline link-underline-opacity-0 ms-auto";
+
+  const artistCon = document.createElement("div");
+  artistCon.className = "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 col-lg-3 col-xl-2 d-md-block d-lg-block";
+
+  const artistCard = document.createElement("div");
+  artistCard.className = "card border-0 artist-main";
   artistCard.onclick = function () {
     window.location.replace("./artist.html?artistId=" + data.artist.id);
   };
 
-  const albums = document.querySelectorAll(`#${id} .album-main img`);
-  const albumTitles = document.querySelectorAll(`#${id} .album-title h5`);
-  const albumTileName = document.querySelectorAll(`#${id} .album-title p`);
+  const artistImg = document.createElement("img");
+  artistImg.className = "card-img-top";
+  artistImg.src = data.artist.picture;
+  artistImg.alt = data.artist.name;
+
+  const artistCardBody = document.createElement("div");
+  artistCardBody.className = "card-body px-0 artist-title";
+
+  const artistTitle = document.createElement("a");
+  artistTitle.className = "card-title link-underline link-underline-opacity-0";
+  artistTitle.innerText = data.artist.name;
+  artistTitle.href = "./artist.html?artistId=" + data.artist.id;
+
+  sectionHeaderCon.append(header, showAll);
+  artistCardBody.append(artistTitle);
+  artistCard.append(artistImg, artistCardBody);
+  artistCon.append(artistCard);
+  section.append(sectionHeaderCon, artistCon);
 
   const albumId = [];
-  for (let x = 4; x >= 0; x--) {
-    let counter = 1;
-    let currentElement = obj.data[x];
-    while (!albumId.includes(currentElement.album.id)) {
-      currentElement = obj.data[x + counter];
-      console.log(currentElement);
+  let counter = 1;
+  for (let i = 0; i <= 4; i++) {
+    let currentElement = obj.data[i];
+    while (albumId.includes(currentElement.album.id || currentElement.artist.name !== id)) {
+      currentElement = obj.data[i + counter];
+      console.log(currentElement.album.id);
       counter++;
-      albumId.push(currentElement.album.id);
+    }
+    albumId.push(currentElement.album.id);
+
+    const albumCardCon = document.createElement("div");
+    switch (i) {
+      case 0:
+        albumCardCon.className = "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 col-lg-3 col-xl-2 d-md-block d-lg-block";
+        break;
+      case 1:
+        albumCardCon.className =
+          "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 col-lg-3 col-xl-2 d-none d-md-block d-lg-block";
+        break;
+      case 2:
+        albumCardCon.className =
+          "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 col-lg-3 col-xl-2 d-none d-md-block d-lg-block";
+        break;
+      case 3:
+        albumCardCon.className = "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 p-1 col-lg-3 col-xl-2 d-none d-xl-block";
+        break;
+      case 4:
+        albumCardCon.className = "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 p-1 col-lg-3 col-xl-2 d-none d-xl-block";
+        break;
     }
 
-    for (let i = 0; i < albums.length; i++) {
-      const currentAlbum = albums[x];
-      const title = albumTitles[x];
-      const artist = albumTileName[x];
-      currentAlbum.src = currentElement.album.cover;
-      currentAlbum.onclick = function () {
-        window.location.replace("./album.html?albumId=" + currentElement.album.id);
-      };
+    const albumCard = document.createElement("div");
+    albumCard.className = "card border-0 album-main";
 
-      currentAlbum.alt = currentElement.album.title;
-      title.innerText = currentElement.album.title;
-      title.onclick = function () {
-        window.location.replace("./album.html?albumId=" + currentElement.album.id);
-      };
+    const albumImg = document.createElement("img");
+    albumImg.className = "card-img-top";
+    albumImg.src = currentElement.album.cover;
+    albumImg.alt = currentElement.album.title;
+    albumImg.onclick = function () {
+      window.location.replace("./album.html?albumId=" + currentElement.album.id);
+    };
 
-      artist.innerText = currentElement.artist.name;
-      artist.onclick = function () {
-        window.location.replace("./artist.html?artistId=" + currentElement.artist.id);
-      };
-    }
+    const albumCardBody = document.createElement("div");
+    albumCardBody.className = "card-body d-flex flex-column px-0 album-title";
+
+    const albumTitle = document.createElement("a");
+    albumTitle.className = "card-title h6 link-underline link-underline-opacity-0 line-clamp";
+    albumTitle.innerText = currentElement.album.title;
+    albumTitle.href = "./artist.html?albumId=" + currentElement.album.id;
+
+    const albumArtist = document.createElement("a");
+    albumArtist.className = "card-text text-secondary album-artist link-underline link-underline-opacity-0 line-clamp";
+    albumArtist.innerText = currentElement.artist.name;
+    albumArtist.href = "./artist.html?artistId=" + currentElement.artist.id;
+
+    albumCardBody.append(albumTitle, albumArtist);
+    albumCard.append(albumImg, albumCardBody);
+    albumCardCon.append(albumCard);
+    section.append(albumCardCon);
   }
+
+  main.append(section);
 };
 
 const startup = () => {
   domManipulation("grimes");
-  domManipulation("dua-lipa");
+  domManipulation("eminem");
   domManipulation("good-boy-daisy");
 };
 
