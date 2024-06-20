@@ -119,7 +119,7 @@ const sectionGen = async id => {
     const albumTitle = document.createElement("a");
     albumTitle.className = "card-title h6  line-clamp-1";
     albumTitle.innerText = currentElement.album.title;
-    albumTitle.href = "./artist.html?albumId=" + currentElement.album.id;
+    albumTitle.href = "./album.html?albumId=" + currentElement.album.id;
 
     const albumArtist = document.createElement("a");
     albumArtist.className = "card-text text-secondary album-artist  line-clamp-1";
@@ -164,7 +164,7 @@ const startup = () => {
   sectionGen("good-boy-daisy");
   sectionGen("bring-me-the-horizon");
   bannerManipulation("random");
-  libraryGen("eminem");
+  libraryGen("dua-lipa");
 };
 
 window.addEventListener("DOMContentLoaded", startup());
