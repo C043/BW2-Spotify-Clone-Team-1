@@ -12183,6 +12183,21 @@ body #body-artist {
     height: calc(100vh - 180px);
   }
 }
+body #footer .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #2a2929;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+body #footer .social svg {
+  width: 15px;
+  height: 15px;
+  fill: white;
+}
 body #song-info-block {
   height: calc(100vh - 120px);
 }
