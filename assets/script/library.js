@@ -16,7 +16,7 @@ const get = async artist => {
   }
 };
 
-const libraryGen = async id => {
+export const libraryGen = async id => {
   const obj = await get(id);
   const data = await obj.data;
 
@@ -69,7 +69,3 @@ const libraryGen = async id => {
     libraryList.append(cardCon);
   }
 };
-
-const startup = () => libraryGen("dua lipa");
-
-window.addEventListener("DOMContentLoaded", startup);

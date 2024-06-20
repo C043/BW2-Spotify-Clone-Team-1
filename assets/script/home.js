@@ -1,5 +1,5 @@
 import { token } from "./token.js";
-
+import { libraryGen } from "./library.js";
 /* fetch search */
 const get = async artist => {
   try {
@@ -53,15 +53,19 @@ const sectionGen = async id => {
   artistImg.alt = data.artist.name;
 
   const artistCardBody = document.createElement("div");
-  artistCardBody.className = "card-body px-0 artist-title";
+  artistCardBody.className = "card-body d-flex flex-column px-0 artist-title";
 
   const artistTitle = document.createElement("a");
-  artistTitle.className = "card-title ";
+  artistTitle.className = "card-title h6 line-clamp-1";
   artistTitle.innerText = data.artist.name;
   artistTitle.href = "./artist.html?artistId=" + data.artist.id;
 
+  const artist = document.createElement("p");
+  artist.className = "text-secondary";
+  artist.innerText = "Artist";
+
   sectionHeaderCon.append(header, showAll);
-  artistCardBody.append(artistTitle);
+  artistCardBody.append(artistTitle, artist);
   artistCard.append(artistImg, artistCardBody);
   artistCon.append(artistCard);
   section.append(sectionHeaderCon, artistCon);
@@ -110,15 +114,15 @@ const sectionGen = async id => {
     };
 
     const albumCardBody = document.createElement("div");
-    albumCardBody.className = "card-body d-flex flex-column px-0 album-title";
+    albumCardBody.className = "card-body d-flex flex-column justify-content-between px-0 album-title";
 
     const albumTitle = document.createElement("a");
-    albumTitle.className = "card-title h6  line-clamp";
+    albumTitle.className = "card-title h6  line-clamp-1";
     albumTitle.innerText = currentElement.album.title;
     albumTitle.href = "./artist.html?albumId=" + currentElement.album.id;
 
     const albumArtist = document.createElement("a");
-    albumArtist.className = "card-text text-secondary album-artist  line-clamp";
+    albumArtist.className = "card-text text-secondary album-artist  line-clamp-1";
     albumArtist.innerText = currentElement.artist.name;
     albumArtist.href = "./artist.html?artistId=" + currentElement.artist.id;
 
@@ -158,7 +162,9 @@ const startup = () => {
   sectionGen("grimes");
   sectionGen("bo burnham");
   sectionGen("good-boy-daisy");
+  sectionGen("bring-me-the-horizon");
   bannerManipulation("random");
+  libraryGen("eminem");
 };
 
 window.addEventListener("DOMContentLoaded", startup());
