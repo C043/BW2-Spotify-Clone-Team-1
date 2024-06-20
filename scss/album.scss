@@ -1,14 +1,12 @@
-@import "./partials/style";
-
+@import "./partials/_style.scss";
 
 body {
-    #body-album {
-        height: calc(100vh - 120px);
-        overflow-y: scroll;
+  #body-album {
+    height: calc(100vh - 120px);
+    overflow-y: scroll;
 
-        #header-album {
-            background: linear-gradient(rgb(68, 67, 67), #3d92f400);
-
-        }
+    #header-album {
+      background: linear-gradient(rgb(68, 67, 67), #3d92f400);
     }
+  }
 }
