@@ -37,8 +37,17 @@ const domManipulation = async id => {
   const albumTitles = document.querySelectorAll(`#${id} .album-title h5`);
   const albumTileName = document.querySelectorAll(`#${id} .album-title p`);
 
+  const albumId = [];
   for (let x = 4; x >= 0; x--) {
-    const currentElement = obj.data[x];
+    let counter = 1;
+    let currentElement = obj.data[x];
+    while (!albumId.includes(currentElement.album.id)) {
+      currentElement = obj.data[x + counter];
+      console.log(currentElement);
+      counter++;
+      albumId.push(currentElement.album.id);
+    }
+
     for (let i = 0; i < albums.length; i++) {
       const currentAlbum = albums[x];
       const title = albumTitles[x];
@@ -62,6 +71,10 @@ const domManipulation = async id => {
   }
 };
 
-domManipulation("grimes");
-domManipulation("dua-lipa");
-domManipulation("good-boy-daisy");
+const startup = () => {
+  domManipulation("grimes");
+  domManipulation("dua-lipa");
+  domManipulation("good-boy-daisy");
+};
+
+window.addEventListener("DOMContentLoaded", startup());
