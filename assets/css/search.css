@@ -12205,11 +12205,18 @@ header {
   cursor: pointer;
 }
 
+.card-item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#popularSong h2, #popularSong .h2 {
+  color: var(--bs-secondary);
+}
+
 #popularSong li:hover {
   background-color: #242424;
-}
-#popularSong li:hover h2, #popularSong li:hover .h2 {
-  color: var(--bs-secondary);
+  color: red;
 }
 
 #artistCard {
@@ -12220,6 +12227,25 @@ header {
 }
 #artistCard img {
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.7);
+}
+
+#footer {
+  margin-top: 5rem;
+}
+#footer .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #2a2929;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+#footer .social svg {
+  width: 15px;
+  height: 15px;
+  fill: white;
 }
 
 @media (max-width: 768px) {
