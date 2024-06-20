@@ -12297,6 +12297,9 @@ body #mobile-nav svg {
 #home #day div .day-img img {
   width: 100%;
 }
+#home section .col-6:hover {
+  background-color: #2a2929;
+}
 #home section .artist-main {
   cursor: pointer;
 }

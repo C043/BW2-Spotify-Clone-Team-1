@@ -42,6 +42,11 @@
     }
   }
   section {
+    .col-6 {
+      &:hover {
+        background-color: #2a2929;
+      }
+    }
     .artist-main {
       cursor: pointer;
       img {

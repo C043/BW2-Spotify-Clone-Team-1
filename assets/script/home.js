@@ -15,7 +15,7 @@ const get = async artist => {
   }
 };
 
-const domManipulation = async id => {
+const sectionGen = async id => {
   const obj = await get(id);
   const data = await obj.data[0];
   console.log(obj);
@@ -37,17 +37,17 @@ const domManipulation = async id => {
   showAll.className = "text-secondary link-underline link-underline-opacity-0 ms-auto";
 
   const artistCon = document.createElement("div");
-  artistCon.className = "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 col-lg-3 col-xl-2 d-md-block d-lg-block";
+  artistCon.className = "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 col-lg-3 col-xl-3 d-md-block d-lg-block";
 
   const artistCard = document.createElement("div");
-  artistCard.className = "card border-0 artist-main";
+  artistCard.className = "card border-0 artist-main ";
   artistCard.onclick = function () {
     window.location.replace("./artist.html?artistId=" + data.artist.id);
   };
 
   const artistImg = document.createElement("img");
   artistImg.className = "card-img-top";
-  artistImg.src = data.artist.picture;
+  artistImg.src = data.artist.picture_xl;
   artistImg.alt = data.artist.name;
 
   const artistCardBody = document.createElement("div");
@@ -66,7 +66,7 @@ const domManipulation = async id => {
 
   const albumId = [];
   let counter = 1;
-  for (let i = 0; i <= 4; i++) {
+  for (let i = 0; i <= 2; i++) {
     let currentElement = obj.data[i];
     while (albumId.includes(currentElement.album.id || currentElement.artist.name !== id)) {
       currentElement = obj.data[i + counter];
@@ -78,21 +78,21 @@ const domManipulation = async id => {
     const albumCardCon = document.createElement("div");
     switch (i) {
       case 0:
-        albumCardCon.className = "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 col-lg-3 col-xl-2 d-md-block d-lg-block";
+        albumCardCon.className = "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 col-lg-3 col-xl-3 d-md-block d-lg-block";
         break;
       case 1:
         albumCardCon.className =
-          "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 col-lg-3 col-xl-2 d-none d-md-block d-lg-block";
+          "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 col-lg-3 col-xl-3 d-none d-md-block d-lg-block";
         break;
       case 2:
         albumCardCon.className =
-          "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 col-lg-3 col-xl-2 d-none d-md-block d-lg-block";
+          "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 col-lg-3 col-xl-3 d-none d-md-block d-lg-block";
         break;
       case 3:
-        albumCardCon.className = "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 p-1 col-lg-3 col-xl-2 d-none d-xl-block";
+        albumCardCon.className = "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 p-1 col-lg-3 col-xl-3 d-none d-xl-block";
         break;
       case 4:
-        albumCardCon.className = "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 p-1 col-lg-3 col-xl-2 d-none d-xl-block";
+        albumCardCon.className = "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 p-1 col-lg-3 col-xl-3 d-none d-xl-block";
         break;
     }
 
@@ -101,7 +101,7 @@ const domManipulation = async id => {
 
     const albumImg = document.createElement("img");
     albumImg.className = "card-img-top";
-    albumImg.src = currentElement.album.cover;
+    albumImg.src = currentElement.album.cover_xl;
     albumImg.alt = currentElement.album.title;
     albumImg.onclick = function () {
       window.location.replace("./album.html?albumId=" + currentElement.album.id);
@@ -152,9 +152,9 @@ const bannerManipulation = async id => {
 };
 
 const startup = () => {
-  domManipulation("grimes");
-  domManipulation("eminem");
-  domManipulation("good-boy-daisy");
+  sectionGen("grimes");
+  sectionGen("bo burnham");
+  sectionGen("good-boy-daisy");
   bannerManipulation("random");
 };
 
