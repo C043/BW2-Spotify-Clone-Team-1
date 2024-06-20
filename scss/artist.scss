@@ -1,1 +1,106 @@
 @import "./partials/style";
+
+#body-artist {
+  height: calc(100vh - 85px);
+  overflow-y: scroll;
+
+  #header-artist {
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 375px;
+    overflow: hidden;
+
+    & h1 {
+      font-family: sans-serif;
+      font-weight: 545;
+      font-size: 6rem;
+      letter-spacing: -4.5px;
+    }
+
+    #verified-artist {
+      svg {
+        fill: #3d91f4;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  #main-artist {
+    #interaction-section {
+      & button {
+        border: 1px solid scale-color($color: $gray-600, $lightness: -70%);
+        color: white;
+        font-weight: 500;
+
+        &:hover {
+          transform: scale(1.05);
+          background-color: transparent;
+          border-color: scale-color($color: $gray-600, $lightness: 10%);
+        }
+      }
+
+      & div:first-child {
+        & svg {
+          &:hover {
+            fill: black;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    #populars-section {
+      #popular-songs {
+        & div {
+          border-radius: 10px;
+
+          & svg:first-child:hover {
+            fill: #1fde64;
+            transform: scale(1.05);
+          }
+
+          img {
+            max-width: 50px;
+            max-height: 50px;
+          }
+
+          &:hover {
+            background-color: scale-color($color: #1a1a1a, $lightness: 10%);
+          }
+        }
+      }
+
+      #last-album {
+        & div {
+          width: 500px;
+          height: 300px;
+          background: linear-gradient(trasparent, #000000d1);
+        }
+      }
+    }
+
+    .card {
+      background-color: transparent;
+      border: none;
+
+      &:hover {
+        background-color: scale-color($color: #1a1a1a, $lightness: -10%);
+
+      }
+    }
+  }
+
+  /*  #main-artist {
+  } */
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
