@@ -69,3 +69,7 @@ export const libraryGen = async id => {
     libraryList.append(cardCon);
   }
 };
+
+const startup = () => libraryGen("dua-lipa");
+
+window.addEventListener("DOMContentLoaded", startup);

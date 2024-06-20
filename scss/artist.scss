@@ -1,9 +1,6 @@
-@import "./partials/style";
+@import "./partials/_style";
 
 #body-artist {
-  height: calc(100vh - 85px);
-  overflow-y: scroll;
-
   #header-artist {
     background-position: top;
     background-size: cover;
@@ -89,7 +86,6 @@
 
       &:hover {
         background-color: scale-color($color: #1a1a1a, $lightness: -10%);
-
       }
     }
   }
@@ -100,7 +96,7 @@
 
 .line-clamp-1 {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

@@ -12174,6 +12174,15 @@ body #library-list .library-img img {
   width: 100%;
   height: 100%;
 }
+body #body-artist {
+  height: calc(100vh - 120px);
+  overflow-y: scroll;
+}
+@media (max-width: 768px) {
+  body #body-artist {
+    height: calc(100vh - 180px);
+  }
+}
 body #song-info-block {
   height: calc(100vh - 120px);
 }
@@ -12270,4 +12279,75 @@ body #mobile-nav svg {
 #index:hover a svg {
   color: white !important;
   fill: white !important;
+}
+
+#body-artist {
+  /*  #main-artist {
+  } */
+}
+#body-artist #header-artist {
+  background-position: top;
+  background-size: cover;
+  width: 100%;
+  height: 375px;
+  overflow: hidden;
+}
+#body-artist #header-artist h1, #body-artist #header-artist .h1 {
+  font-family: sans-serif;
+  font-weight: 545;
+  font-size: 6rem;
+  letter-spacing: -4.5px;
+}
+#body-artist #header-artist #verified-artist svg {
+  fill: #3d91f4;
+}
+#body-artist #header-artist #verified-artist svg:hover {
+  transform: scale(1.1);
+}
+#body-artist #main-artist #interaction-section button {
+  border: 1px solid #323232;
+  color: white;
+  font-weight: 500;
+}
+#body-artist #main-artist #interaction-section button:hover {
+  transform: scale(1.05);
+  background-color: transparent;
+  border-color: #b0b0b0;
+}
+#body-artist #main-artist #interaction-section div:first-child svg:hover {
+  fill: black;
+  transform: scale(1.1);
+}
+#body-artist #main-artist #populars-section #popular-songs div {
+  border-radius: 10px;
+}
+#body-artist #main-artist #populars-section #popular-songs div svg:first-child:hover {
+  fill: #1fde64;
+  transform: scale(1.05);
+}
+#body-artist #main-artist #populars-section #popular-songs div img {
+  max-width: 50px;
+  max-height: 50px;
+}
+#body-artist #main-artist #populars-section #popular-songs div:hover {
+  background-color: #313131;
+}
+#body-artist #main-artist #populars-section #last-album div {
+  width: 500px;
+  height: 300px;
+  background: linear-gradient(trasparent, rgba(0, 0, 0, 0.8196078431));
+}
+#body-artist #main-artist .card {
+  background-color: transparent;
+  border: none;
+}
+#body-artist #main-artist .card:hover {
+  background-color: #171717;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }/*# sourceMappingURL=artist.css.map */

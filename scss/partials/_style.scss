@@ -59,6 +59,13 @@ body {
       }
     }
   }
+  #body-artist {
+    height: calc(100vh - 120px);
+    overflow-y: scroll;
+    @media (max-width: 768px) {
+      height: calc(100vh - 180px);
+    }
+  }
   #song-info-block {
     height: calc(100vh - 120px);
     .song-card {

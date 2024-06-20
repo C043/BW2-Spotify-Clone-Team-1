@@ -12174,6 +12174,15 @@ body #library-list .library-img img {
   width: 100%;
   height: 100%;
 }
+body #body-artist {
+  height: calc(100vh - 120px);
+  overflow-y: scroll;
+}
+@media (max-width: 768px) {
+  body #body-artist {
+    height: calc(100vh - 180px);
+  }
+}
 body #song-info-block {
   height: calc(100vh - 120px);
 }
