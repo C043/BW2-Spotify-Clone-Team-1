@@ -129,10 +129,33 @@ const domManipulation = async id => {
   main.append(section);
 };
 
+const bannerManipulation = async id => {
+  const obj = await get(id);
+  const data = await obj.data[0];
+
+  const bannerImg = document.querySelector(".banner-img img");
+  bannerImg.src = data.album.cover_big;
+  bannerImg.alt = data.album.title;
+
+  const bannerAlbum = document.getElementById("banner-album");
+  bannerAlbum.href = "./artist.html?albumId=" + data.album.id;
+  bannerAlbum.innerText = data.album.title;
+
+  const bannerArtist = document.getElementById("banner-artist");
+  bannerArtist.href = "./artist.html?artistId=" + data.artist.id;
+  bannerArtist.innerText = data.artist.name;
+
+  const bannerPlayBtn = document.getElementById("banner-play");
+  bannerPlayBtn.onclick = function () {
+    window.location.replace("./album.html?abumId=" + data.album.id);
+  };
+};
+
 const startup = () => {
   domManipulation("grimes");
   domManipulation("eminem");
   domManipulation("good-boy-daisy");
+  bannerManipulation("random");
 };
 
 window.addEventListener("DOMContentLoaded", startup());
