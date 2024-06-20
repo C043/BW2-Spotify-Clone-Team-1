@@ -12153,17 +12153,17 @@ body svg:not(#play svg, .active):active {
 body #library-block {
   height: calc(100vh - 224px);
 }
-body #library-block #library-list .library-list-item:hover {
+body #library-list .library-list-item:hover {
   background-color: #1a1a1a;
 }
-body #library-block #library-list .library-list-item:active {
+body #library-list .library-list-item:active {
   background-color: #232323;
 }
-body #library-block #library-list .library-img {
+body #library-list .library-img {
   width: 60px;
   height: 60px;
 }
-body #library-block #library-list .library-img img {
+body #library-list .library-img img {
   width: 100%;
   height: 100%;
 }
@@ -12253,6 +12253,18 @@ body #mobile-nav svg {
   height: 25px;
 }
 
+#search:hover a,
+#search:hover a svg {
+  color: white !important;
+  fill: white !important;
+}
+
+#index:hover a,
+#index:hover a svg {
+  color: white !important;
+  fill: white !important;
+}
+
 #home {
   height: calc(100vh - 120px);
 }
@@ -12260,6 +12272,12 @@ body #mobile-nav svg {
   #home {
     height: calc(100vh - 180px);
   }
+}
+#home a {
+  text-decoration: none;
+}
+#home a:hover {
+  text-decoration: underline;
 }
 #home #nav {
   width: 100%;

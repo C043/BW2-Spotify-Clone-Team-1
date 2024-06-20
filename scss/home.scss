@@ -5,6 +5,12 @@
   @media (max-width: 768px) {
     height: calc(100vh - 180px);
   }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   #nav {
     width: 100%;
     position: sticky;

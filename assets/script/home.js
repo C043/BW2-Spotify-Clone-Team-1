@@ -34,7 +34,7 @@ const sectionGen = async id => {
   header.innerText = data.artist.name;
 
   const showAll = document.createElement("a");
-  showAll.className = "text-secondary link-underline link-underline-opacity-0 ms-auto";
+  showAll.className = "text-secondary  ms-auto";
 
   const artistCon = document.createElement("div");
   artistCon.className = "col-6 col-md-3 rounded-3 px-3 py-1 rounded-3 col-lg-3 col-xl-3 d-md-block d-lg-block";
@@ -54,7 +54,7 @@ const sectionGen = async id => {
   artistCardBody.className = "card-body px-0 artist-title";
 
   const artistTitle = document.createElement("a");
-  artistTitle.className = "card-title link-underline link-underline-opacity-0";
+  artistTitle.className = "card-title ";
   artistTitle.innerText = data.artist.name;
   artistTitle.href = "./artist.html?artistId=" + data.artist.id;
 
@@ -111,12 +111,12 @@ const sectionGen = async id => {
     albumCardBody.className = "card-body d-flex flex-column px-0 album-title";
 
     const albumTitle = document.createElement("a");
-    albumTitle.className = "card-title h6 link-underline link-underline-opacity-0 line-clamp";
+    albumTitle.className = "card-title h6  line-clamp";
     albumTitle.innerText = currentElement.album.title;
     albumTitle.href = "./artist.html?albumId=" + currentElement.album.id;
 
     const albumArtist = document.createElement("a");
-    albumArtist.className = "card-text text-secondary album-artist link-underline link-underline-opacity-0 line-clamp";
+    albumArtist.className = "card-text text-secondary album-artist  line-clamp";
     albumArtist.innerText = currentElement.artist.name;
     albumArtist.href = "./artist.html?artistId=" + currentElement.artist.id;
 
