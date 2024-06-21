@@ -18,7 +18,7 @@ body {
   overflow-y: scroll;
 }
 
-svg:not(#play svg, .active) {
+svg:not(#play svg, .active, .play-btn svg, .pause-btn svg) {
   fill: #a7a7a7;
   &:hover {
     fill: white;
@@ -28,6 +28,7 @@ svg:not(#play svg, .active) {
     fill: white;
   }
 }
+
 #library-block {
   height: calc(100vh - 224px);
 }
