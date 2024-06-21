@@ -131,7 +131,7 @@ const createTrackCard = obj => {
     padding-block: 1.1px;
     padding-inline: 6px;
   `
-  explicit.innerText = obj.explicit_lyrics ? 'E' : ''
+  explicit.innerText = obj.explicit_lyrics ? 'E' : explicit.style = 'display: none;'
 
 
   detailsTrack.appendChild(titleTrack);
