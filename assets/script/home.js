@@ -163,11 +163,12 @@ const sectionGen = async id => {
       pauseBtn.classList.remove("play-btn");
       pauseBtn.classList.add("pause-btn");
 
-      const playerImges = document.querySelectorAll("#player .library-img img");
-      playerImges.forEach(image => (image.src = currentElement.album.cover));
+      const playerImage = document.querySelector("#player .library-img img");
+      playerImage.src = currentElement.album.cover;
+      playerImage.classList.add("flex-shrink-0");
 
       const playerAnchors = document.querySelectorAll("#player a");
-      playerAnchors.forEach(anchor => (anchor.classList.add = "line-clamp-1"));
+      playerAnchors.forEach(anchor => anchor.classList.add("line-clamp-1"));
       playerAnchors[0].innerText = currentElement.title;
       playerAnchors[0].href = "./album.html?albumId=" + currentElement.album.id;
       playerAnchors[1].innerText = currentElement.artist.name;
