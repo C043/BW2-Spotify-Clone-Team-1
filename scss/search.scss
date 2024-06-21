@@ -1,1 +1,143 @@
 @import "./partials/style";
+
+header {
+  padding-bottom: 10px;
+}
+
+.container-scroll {
+  height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+
+.musica-card {
+  background-color: #e91e63;
+  border: none;
+  color: white;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  .card-body {
+    text-align: left;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .card-img {
+    position: absolute;
+    bottom: 1px;
+    right: -18px;
+    width: 105px;
+    height: 105px;
+    transform: rotate(20deg);
+    border-radius: 5px;
+    box-shadow: -3px 5px 13px -1px rgba(0, 0, 0, 0.41);
+  }
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 50px;
+  padding: 5px 20px;
+  width: 100%;
+  min-width: 300px;
+
+  .search-icon {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+  }
+
+  .search-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+
+  &:focus-within {
+    border: 2px solid white;
+  }
+}
+
+.icon-container {
+  transition: transform 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+
+    svg,
+    div {
+      cursor: pointer;
+    }
+  }
+}
+.card-item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+#popularSong h2 {
+  color: var(--bs-secondary);
+}
+#popularSong {
+  li:hover {
+    background-color: #242424;
+    color: red;
+  }
+}
+
+#artistCard {
+  background-color: #181818;
+
+  &:hover {
+    background-color: #242424;
+  }
+
+  img {
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.7);
+  }
+}
+
+#footer {
+  margin-top: 5rem;
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #2a2929;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    svg {
+      width: 15px;
+      height: 15px;
+      fill: white;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    max-width: 100%;
+  }
+}
