@@ -2,6 +2,9 @@ const songs_album = document.getElementById("songs-album");
 const details_album = document.getElementById("details-album");
 const navbar = document.getElementById("navbar")
 
+const audio = new Audio()
+let playing = false
+
 const Id = new URLSearchParams(window.location.search).get("albumId");
 
 const URL = "https://deezerdevs-deezer.p.rapidapi.com/album/" + Id;
@@ -49,7 +52,16 @@ const createTrackCard = obj => {
   const trackContainer = document.createElement("div");
   trackContainer.className = "song d-flex align-items-center gap-3 py-2 pe-2 me-2";
   /* trackContainer.id = 'track-container'; */
-
+  trackContainer.addEventListener('click', () => {
+    audio.src = obj.preview; // Imposta la sorgente dell'audio
+    if (playing == false) {
+      audio.play()
+      playing = true
+    } else {
+      audio.pause()
+      playing = false
+    }
+  });
   // Crea l'elemento per il numero della traccia
   const trackNumber = document.createElement("div");
   trackNumber.className = "fs-5 ms-4 play";
@@ -101,18 +113,31 @@ const createTrackCard = obj => {
   titleTrack.innerText = obj.title;
 
   const artistTrack = document.createElement("a");
-  artistTrack.className = "link-item";
+  artistTrack.className = "link-item d-flex gap-2";
   artistTrack.style = "font-size: 15px";
   artistTrack.href = "./artist.html?artistId=" + obj.artist.id;
   artistTrack.innerText = obj.artist.name;
 
-  const explicit = document.createElement("div");
-  /* explicit.id = 'explicit'; */
-  explicit.className = "lead";
-  explicit.innerText = "";
+  const explicitContainer = document.createElement("div");
+  /* explicit.className = "btn btn-outline-dark text-light ms-2 disabled"; */
+  /* explicit.style = '' */
+  /* explicit.innerText = obj.explicit_lyrics ? 'E' : ''; */
+
+  const explicit = document.createElement('button')
+  explicit.className = 'btn btn-outline-dark'
+  explicit.style =
+    ` 
+    font-size: 10px;
+    padding-block: 1.1px;
+    padding-inline: 6px;
+  `
+  explicit.innerText = obj.explicit_lyrics ? 'E' : explicit.style = 'display: none;'
+
 
   detailsTrack.appendChild(titleTrack);
   detailsTrack.appendChild(artistTrack);
+  artistTrack.appendChild(explicitContainer)
+  explicitContainer.appendChild(explicit)
 
   // Crea l'elemento per i bottoni finali
   const endingButtons = document.createElement("div");
@@ -124,20 +149,22 @@ const createTrackCard = obj => {
                                 <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm11.748-1.97a.75.75 0 0 0-1.06-1.06l-4.47 4.47-1.405-1.406a.75.75 0 1 0-1.061 1.06l2.466 2.467 5.53-5.53z"></path>
                                </svg>`;
 
-  let minutes = Math.floor(obj.duration / 60);
-  let seconds = obj.duration - minutes * 60;
-  let result;
 
-  if (toString(seconds).length === 1) {
-    result = minutes + ":" + seconds + "0";
-  } else {
-    result = minutes + ":" + seconds;
+  const seconds = obj.duration;
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const min = minutes * 60;
+  let actualSeconds = seconds - min;
+
+  if (actualSeconds.toString().length < 2) {
+    actualSeconds = "0" + actualSeconds.toString();
   }
+
+  const duration = minutes + ":" + actualSeconds;
 
   const trackDuration = document.createElement("p");
   trackDuration.id = "track-duration";
   trackDuration.className = "m-0";
-  trackDuration.innerText = result;
+  trackDuration.innerText = duration;
 
   const threeDots = document.createElement("div");
   threeDots.style.opacity = 0;
@@ -163,7 +190,7 @@ const createTrackCard = obj => {
 function createAlbumCard(obj) {
   // Crea il contenitore principale
   const container = document.createElement("div");
-  container.className = 'd-flex'
+  container.className = 'd-flex align-items-center flex-column flex-sm-row align-items-sm-center'
 
   // Crea il div per l'immagine
   const imgDiv = document.createElement("div");
@@ -218,8 +245,9 @@ function createNavbar() {
   mainContainer.className = 'd-flex justify-content-between pb-5';
 
   // Crea il bottone con l'icona
-  const buttonContainer = document.createElement('button');
+  const buttonContainer = document.createElement('a');
   buttonContainer.className = 'btn btn-outline-dark rounded-circle';
+  buttonContainer.href = '/'
 
   const svgIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svgIcon.setAttribute('data-encore-id', 'icon');

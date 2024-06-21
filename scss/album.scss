@@ -5,6 +5,14 @@ body {
     height: calc(100vh - 120px);
     overflow-y: scroll;
 
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     #header-album {
       background: linear-gradient(rgb(68, 67, 67), #3d92f400);
 

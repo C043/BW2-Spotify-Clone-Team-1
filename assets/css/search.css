@@ -12457,4 +12457,13 @@ header {
 }
 #song-section-block a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  #esplora .row {
+    margin-inline: 50px;
+  }
+  #esplora h1, #esplora .h1 {
+    text-align: center;
+  }
 }/*# sourceMappingURL=search.css.map */

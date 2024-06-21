@@ -13,6 +13,8 @@
       letter-spacing: -4.5px;
     }
 
+
+
     #verified-artist {
       svg {
         fill: #3d91f4;
@@ -25,6 +27,10 @@
   }
 
   #main-artist {
+    & h5 {
+      font-size: 0.95rem;
+    }
+
     #interaction-section {
       & button {
         border: 1px solid scale-color($color: $gray-600, $lightness: -70%);
@@ -65,6 +71,13 @@
 
           &:hover {
             background-color: scale-color($color: #1a1a1a, $lightness: 10%);
+          }
+        }
+
+        #track-container {
+
+          &:hover {
+            cursor: pointer;
           }
         }
       }
