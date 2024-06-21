@@ -38,7 +38,7 @@ const search = async e => {
   h2.innerText = "Relevant";
 
   const artistCard = document.createElement("div");
-  artistCard.className = "card rounded py-4 px-3 border-0";
+  artistCard.className = "card rounded py-4 px-3 border-0 d-flex flex-row align-items-center gap-4 d-md-block";
   artistCard.id = "artistCard";
   artistCard.style.height = "264px";
   artistCard.onclick = function () {
@@ -55,6 +55,8 @@ const search = async e => {
   artistImg.src = data[0].artist.picture_big;
   artistImg.alt = data[0].artist.name;
 
+  const infoBox = document.createElement("div");
+
   const artistTitle = document.createElement("a");
   artistTitle.className = "h1 link-underline link-underline-opacity-0 fw-bold fs-3";
   artistTitle.innerText = data[0].artist.name;
@@ -64,7 +66,8 @@ const search = async e => {
   p.innerText = "Artist";
 
   artistImgCon.append(artistImg);
-  artistCard.append(artistImgCon, artistTitle, p);
+  infoBox.append(artistTitle, p);
+  artistCard.append(artistImgCon, infoBox);
   relevant.append(h2, artistCard);
   row.append(relevant);
 
