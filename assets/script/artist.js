@@ -204,15 +204,19 @@ const fetch_albums = id => {
     })
     .then(obj_albums => {
       for (let i = 0; i < 4; i++) {
-        generate_albums(obj_albums.data[i]);
+        generate_albums_cards(obj_albums.data[i]);
       }
     })
     .catch(err => console.log(err));
 };
 
-const generate_albums = album => {
+const generate_albums_cards = album => {
   const card_cont = document.createElement("div");
   card_cont.className = "col-3 p-0";
+  card_cont.addEventListener('click', (e) => {
+    e.preventDefault()
+    window.location.replace('./album.html?albumId=' + album.id)
+  })
 
   const card = document.createElement("div");
   card.className = "card p-3";
@@ -230,11 +234,11 @@ const generate_albums = album => {
   h5.className = "card-title line-clamp-1";
   h5.innerText = album.title;
 
-  const a = document.createElement("a");
-  a.href = "";
-  a.innerText = artist_name;
+  const p = document.createElement('p')
+  p.innerText = album.release_date.slice(0, 4) + ' • ' + album.type
+  p.style = 'font-size: 15px;  font-weight: 300;'
 
-  card_body.append(h5, a);
+  card_body.append(h5, p);
 
   card.append(img_album, card_body);
 

@@ -84,6 +84,7 @@
 
       &:hover {
         background-color: scale-color($color: #1a1a1a, $lightness: -10%);
+        cursor: pointer;
       }
     }
   }
