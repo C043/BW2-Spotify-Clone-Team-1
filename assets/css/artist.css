@@ -12322,8 +12322,6 @@ svg:not(#play svg, .active):active {
   } */
 }
 #body-artist #header-artist {
-  background-position: top;
-  background-size: cover;
   width: 100%;
   height: 375px;
   overflow: hidden;
@@ -12379,6 +12377,7 @@ svg:not(#play svg, .active):active {
 }
 #body-artist #main-artist .card:hover {
   background-color: #171717;
+  cursor: pointer;
 }
 
 .line-clamp-1 {

@@ -12420,6 +12420,7 @@ header {
 }
 #artistCard:hover {
   background-color: #242424;
+  cursor: pointer;
 }
 #artistCard img {
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.7);
@@ -12448,4 +12449,10 @@ header {
   .search-form {
     max-width: 100%;
   }
+}
+#song-section-block a {
+  text-decoration: none;
+}
+#song-section-block a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=search.css.map */
