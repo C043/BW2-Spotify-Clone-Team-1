@@ -133,9 +133,6 @@ const search = async e => {
 
     if (actualSeconds.toString().length < 2) {
       actualSeconds = "0" + actualSeconds.toString();
-    } else {
-      console.log(actualSeconds.toString());
-      console.log(actualSeconds.toString().length);
     }
 
     const duration = minutes + ":" + actualSeconds;
