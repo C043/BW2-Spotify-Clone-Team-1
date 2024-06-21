@@ -12338,6 +12338,9 @@ svg:not(#play svg, .active):active {
 #body-artist #header-artist #verified-artist svg:hover {
   transform: scale(1.1);
 }
+#body-artist #main-artist h5, #body-artist #main-artist .h5 {
+  font-size: 0.95rem;
+}
 #body-artist #main-artist #interaction-section button {
   border: 1px solid #323232;
   color: white;
@@ -12365,6 +12368,9 @@ svg:not(#play svg, .active):active {
 }
 #body-artist #main-artist #populars-section #popular-songs div:hover {
   background-color: #313131;
+}
+#body-artist #main-artist #populars-section #popular-songs #track-container:hover {
+  cursor: pointer;
 }
 #body-artist #main-artist #populars-section #last-album div {
   width: 500px;

@@ -12321,6 +12321,12 @@ body #body-album {
   height: calc(100vh - 120px);
   overflow-y: scroll;
 }
+body #body-album a {
+  text-decoration: none;
+}
+body #body-album a:hover {
+  text-decoration: underline;
+}
 body #body-album #header-album {
   background: linear-gradient(rgb(68, 67, 67), rgba(61, 146, 244, 0));
 }

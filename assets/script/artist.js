@@ -5,6 +5,9 @@ console.log(artistId);
 let artist_name = "";
 const URL = "https://deezerdevs-deezer.p.rapidapi.com/search?q=" + artist_name; //in questo caso prendo l'artista sleep token
 
+const audio = new Audio()
+let playing = false
+
 /* generiamo la prima delle popular song di un'artista */
 /* andiamo a prendere i contenitori dove andremo ad inserire le canzoni */
 
@@ -63,6 +66,16 @@ const generate_popular_songs = (current_song, i) => {
   const track_container = document.createElement("div");
   track_container.id = "track-container";
   track_container.className = "d-flex align-items-center gap-3 py-2 pe-3";
+  track_container.addEventListener('click', () => {
+    audio.src = current_song.preview; // Imposta la sorgente dell'audio
+    if (playing == false) {
+      audio.play()
+      playing = true
+    } else {
+      audio.pause()
+      playing = false
+    }
+  });
 
   const track_number = document.createElement("div");
   track_number.className = "fs-5 ms-4 play";
@@ -115,10 +128,15 @@ const generate_popular_songs = (current_song, i) => {
   title_track.className = "m-0";
   title_track.innerText = current_song.title; // inseriamo il title della canzone
 
-  const explicit = document.createElement("div");
-  explicit.id = "explicit";
-  explicit.className = "lead";
-  explicit.innerText = current_song.explicit_lyrics ? "exp" : " "; // qui inserirò oppure no il simbolo dell'explicit
+  const explicit = document.createElement('button')
+  explicit.className = 'btn btn-outline-dark'
+  explicit.style =
+    ` 
+    font-size: 10px;
+    padding-block: 1.1px;
+    padding-inline: 6px;
+  `
+  explicit.innerText = current_song.explicit_lyrics ? 'E' : '' // qui inserirò oppure no il simbolo dell'explicit
 
   details_track.append(title_track, explicit);
 
@@ -128,12 +146,22 @@ const generate_popular_songs = (current_song, i) => {
   const verified_icon = document.createElement("div");
   verified_icon.innerHTML = `<svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 gacXSA" width="20" fill="#1DD05D"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm11.748-1.97a.75.75 0 0 0-1.06-1.06l-4.47 4.47-1.405-1.406a.75.75 0 1 0-1.061 1.06l2.466 2.467 5.53-5.53z"></path></svg>`;
 
-  let minutes = Math.floor(current_song.duration / 60);
+  const seconds = current_song.duration;
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const min = minutes * 60;
+  let actualSeconds = seconds - min;
+
+  if (actualSeconds.toString().length < 2) {
+    actualSeconds = "0" + actualSeconds.toString();
+  }
+
+  const duration = minutes + ":" + actualSeconds;
 
   const track_duration = document.createElement("p");
   track_duration.id = "track-duration";
   track_duration.className = "m-0";
-  track_duration.innerText = minutes + ":" + (current_song.duration - minutes * 60); // andrà inserito la durata della canzone...
+  track_duration.style = 'width: 55px'
+  track_duration.innerText = duration; // andrà inserito la durata della canzone...
 
   const three_dots = document.createElement("div");
   three_dots.width = "20";
@@ -219,7 +247,7 @@ const generate_albums_cards = album => {
   })
 
   const card = document.createElement("div");
-  card.className = "card p-3";
+  card.className = "card p-2";
 
   const img_album = document.createElement("img");
   img_album.className = "card-img-top rounded-3";
@@ -236,7 +264,7 @@ const generate_albums_cards = album => {
 
   const p = document.createElement('p')
   p.innerText = album.release_date.slice(0, 4) + ' • ' + album.type
-  p.style = 'font-size: 15px;  font-weight: 300;'
+  p.style = 'font-size: 13px; color: grey;  font-weight: 300;'
 
   card_body.append(h5, p);
 
