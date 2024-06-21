@@ -12323,4 +12323,24 @@ body #body-album {
 }
 body #body-album #header-album {
   background: linear-gradient(rgb(68, 67, 67), rgba(61, 146, 244, 0));
+}
+body #body-album #header-album #details-album #imgContainer {
+  box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.253);
+}
+body #body-album #header-album #details-album #imgContainer img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+body #body-album #header-album #details-album #imgContainer:hover {
+  box-shadow: 0px 0px 17px rgba(255, 255, 255, 0.589);
+  transition: box-shadow 0.3s;
+}
+body #body-album #header-album #details-album h1, body #body-album #header-album #details-album .h1 {
+  font-weight: 500;
+}
+body #body-album #main-album #songs-album .song:hover {
+  cursor: pointer;
+  background-color: #171717;
+  border-radius: 10px;
 }/*# sourceMappingURL=album.css.map */

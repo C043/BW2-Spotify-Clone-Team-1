@@ -1,5 +1,6 @@
 const songs_album = document.getElementById("songs-album");
 const details_album = document.getElementById("details-album");
+const navbar = document.getElementById("navbar")
 
 const Id = new URLSearchParams(window.location.search).get("albumId");
 
@@ -26,6 +27,8 @@ window.addEventListener("DOMContentLoaded", () => {
     .then(obj => {
       console.log(obj.tracks.data);
 
+      createNavbar();
+
       createAlbumCard(obj);
 
       for (let index = 0; index < obj.tracks.data.length; index++) {
@@ -36,10 +39,15 @@ window.addEventListener("DOMContentLoaded", () => {
     .catch(err => console.log(err));
 });
 
+
+
+
+
+
 const createTrackCard = obj => {
   // Crea il div principale
   const trackContainer = document.createElement("div");
-  trackContainer.className = "d-flex align-items-center gap-3 py-2 pe-3";
+  trackContainer.className = "song d-flex align-items-center gap-3 py-2 pe-2 me-2";
   /* trackContainer.id = 'track-container'; */
 
   // Crea l'elemento per il numero della traccia
@@ -144,7 +152,7 @@ const createTrackCard = obj => {
 
   // Assembla la card
   trackContainer.appendChild(trackNumber);
-  trackContainer.appendChild(imgTrack);
+  /* trackContainer.appendChild(imgTrack); */
   trackContainer.appendChild(detailsTrack);
   trackContainer.appendChild(endingButtons);
 
@@ -155,13 +163,15 @@ const createTrackCard = obj => {
 function createAlbumCard(obj) {
   // Crea il contenitore principale
   const container = document.createElement("div");
+  container.className = 'd-flex'
 
   // Crea il div per l'immagine
   const imgDiv = document.createElement("div");
+  imgDiv.id = 'imgContainer'
 
   // Crea l'elemento img
   const img = document.createElement("img");
-  img.className = "p-2";
+  /* img.className = "p-2"; */
   img.src = obj.cover_medium;
   img.width = 200;
   img.alt = obj.title;
@@ -171,10 +181,11 @@ function createAlbumCard(obj) {
 
   // Crea il div per il testo
   const textDiv = document.createElement("div");
+  textDiv.className = 'align-content-center ps-3'
 
   // Crea l'elemento p per il testo "album"
   const albumText = document.createElement("p");
-  albumText.className = "m-0";
+  albumText.className = "m-0 text-light";
   albumText.innerText = "album";
 
   // Crea l'elemento h1 per il nome dell'album
@@ -198,4 +209,99 @@ function createAlbumCard(obj) {
 
   // Aggiungi il contenitore principale al body o ad un altro elemento del DOM
   details_album.appendChild(container);
+}
+
+
+function createNavbar() {
+  // Crea il contenitore principale
+  const mainContainer = document.createElement('div');
+  mainContainer.className = 'd-flex justify-content-between pb-5';
+
+  // Crea il bottone con l'icona
+  const buttonContainer = document.createElement('button');
+  buttonContainer.className = 'btn btn-outline-dark rounded-circle';
+
+  const svgIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svgIcon.setAttribute('data-encore-id', 'icon');
+  svgIcon.setAttribute('role', 'img');
+  svgIcon.setAttribute('aria-hidden', 'true');
+  svgIcon.classList.add('Svg-sc-ytk21e-0', 'cAMMLk', 'IYDlXmBmmUKHveMzIPCF');
+  svgIcon.setAttribute('width', '15');
+  svgIcon.setAttribute('height', '15');
+  svgIcon.setAttribute('fill', 'white');
+  svgIcon.setAttribute('viewBox', '0 0 16 16');
+
+  const svgPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  svgPath.setAttribute('d', 'M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z');
+
+  svgIcon.appendChild(svgPath);
+  buttonContainer.appendChild(svgIcon);
+
+  // Crea il div con i pulsanti e il testo
+  const actionContainer = document.createElement('div');
+  actionContainer.className = 'd-flex gap-2';
+
+  const installButton = document.createElement('button');
+  installButton.textContent = 'installa app';
+  installButton.className = 'd-flex gap-2 btn btn-outline-dark text-light rounded-pill'
+
+  // Crea e aggiungi il secondo SVG all'interno di installButton
+  const svgIconInstall = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svgIconInstall.setAttribute('data-encore-id', 'icon');
+  svgIconInstall.setAttribute('role', 'img');
+  svgIconInstall.setAttribute('aria-hidden', 'true');
+  svgIconInstall.setAttribute('width', '25');
+  svgIconInstall.setAttribute('height', '25');
+  svgIconInstall.setAttribute('fill', 'white');
+  svgIconInstall.setAttribute('viewBox', '0 0 16 16');
+  svgIconInstall.classList.add('Svg-sc-ytk21e-0', 'dYnaPI');
+
+  const svgPath2 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  svgPath2.setAttribute('d', 'M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528a.945.945 0 0 1-.005-.005L4.995 9.805a.75.75 0 0 1 0-1.06z');
+
+  const svgPath3 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  svgPath3.setAttribute('d', 'M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z');
+
+  svgIconInstall.appendChild(svgPath2);
+  svgIconInstall.appendChild(svgPath3);
+
+  installButton.appendChild(svgIconInstall);
+
+  const iconElement = document.createElement('button');
+  /* iconElement.textContent = 'icon'; */
+  iconElement.className = 'btn btn-outline-dark text-light border-0 rounded-circle'
+
+  const svgIconBell = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svgIconBell.setAttribute('data-encore-id', 'icon');
+  svgIconBell.setAttribute('role', 'img');
+  svgIconBell.setAttribute('aria-hidden', 'true');
+  svgIconBell.setAttribute('width', '20');
+  svgIconBell.setAttribute('height', '20');
+  svgIconBell.setAttribute('fill', 'white');
+  svgIconBell.setAttribute('viewBox', '0 0 16 16');
+  svgIconBell.classList.add('Svg-sc-ytk21e-0', 'dYnaPI');
+
+  // Crea l'elemento path e imposta l'attributo 'd'
+  const svgPath4 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  svgPath4.setAttribute('d', 'M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z');
+
+  // Appendi il path all'elemento SVG
+  svgIconBell.appendChild(svgPath4);
+
+  iconElement.appendChild(svgIconBell)
+
+  const profileText = document.createElement('p');
+  profileText.textContent = 'img profilo';
+
+  // Appendi i pulsanti e il testo al contenitore delle azioni
+  actionContainer.appendChild(installButton);
+  actionContainer.appendChild(iconElement);
+  /* actionContainer.appendChild(profileText); */  //disabilitato perché non è da usare adesso
+
+  // Appendi il bottone con l'icona e il contenitore delle azioni al contenitore principale
+  mainContainer.appendChild(buttonContainer);
+  mainContainer.appendChild(actionContainer);
+
+  // Aggiungi il contenitore principale al body o ad un altro elemento del DOM
+  navbar.appendChild(mainContainer);
 }

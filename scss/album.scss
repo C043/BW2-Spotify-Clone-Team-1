@@ -7,6 +7,46 @@ body {
 
     #header-album {
       background: linear-gradient(rgb(68, 67, 67), #3d92f400);
+
+      #details-album {
+        #imgContainer {
+          box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.253);
+
+          img {
+
+            &:hover {
+              transform: scale(1.05);
+              cursor: pointer;
+              transition: transform .3s;
+            }
+          }
+
+          &:hover {
+            box-shadow: 0px 0px 17px rgba(255, 255, 255, 0.589);
+            transition: box-shadow 0.3s;
+          }
+
+        }
+
+        h1 {
+          font-weight: 500;
+        }
+      }
+    }
+
+    #main-album {
+
+      #songs-album {
+
+        .song {
+          &:hover {
+            cursor: pointer;
+            background-color: scale-color($color: #1a1a1a, $lightness: -10%);
+            border-radius: 10px;
+
+          }
+        }
+      }
     }
   }
 }
