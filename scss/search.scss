@@ -110,6 +110,7 @@ header {
 
   &:hover {
     background-color: #242424;
+    cursor: pointer;
   }
 
   img {
@@ -139,5 +140,14 @@ header {
 @media (max-width: 768px) {
   .search-form {
     max-width: 100%;
+  }
+}
+
+#song-section-block {
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
