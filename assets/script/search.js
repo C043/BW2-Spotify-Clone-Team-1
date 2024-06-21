@@ -102,7 +102,7 @@ const search = async e => {
     cardBody.style.overflow = "hidden";
 
     const songTitle = document.createElement("a");
-    songTitle.className = "mb-1 h6 line-clamp-1";
+    songTitle.className = "mb-0 text-light line-clamp-1";
     songTitle.innerText = currentElement.title;
     songTitle.href = "./album.html?albumId=" + currentElement.album.id;
 

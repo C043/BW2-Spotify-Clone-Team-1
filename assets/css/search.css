@@ -12367,7 +12367,7 @@ header {
   border-radius: 50px;
   padding: 5px 20px;
   width: 100%;
-  min-width: 300px;
+  max-width: 100%;
 }
 .search-form .search-icon {
   fill: #fff;
@@ -12452,6 +12452,7 @@ header {
 }
 #song-section-block a {
   text-decoration: none;
+  font-size: 0.8em;
 }
 #song-section-block a:hover {
   text-decoration: underline;
