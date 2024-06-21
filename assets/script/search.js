@@ -132,12 +132,10 @@ const search = async e => {
     let actualSeconds = seconds - min;
 
     if (actualSeconds.toString().length < 2) {
-      console.log("daje");
       actualSeconds = "0" + actualSeconds.toString();
     } else {
       console.log(actualSeconds.toString());
       console.log(actualSeconds.toString().length);
-      console.log("ao");
     }
 
     const duration = minutes + ":" + actualSeconds;
