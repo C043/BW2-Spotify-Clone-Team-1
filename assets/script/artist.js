@@ -36,7 +36,13 @@ window.addEventListener("DOMContentLoaded", e => {
       .then(array_24songs => {
         console.log("CANZONI! -------------->", array_24songs.data);
         name_artist.innerHTML = `<b>${array_24songs.data[0].artist.name}</b>`;
-        header_artist.style = `background: linear-gradient(#3d92f400, black), url(${array_24songs.data[0].artist.picture_xl}) ;`;
+        header_artist.style = `
+        background: linear-gradient(#3d92f400, #ffffff0e, black), url(${array_24songs.data[0].artist.picture_xl}) ;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;`;
+
+        generate_card_artist(array_24songs.data[0])
 
         for (let i = 0; i < 5; i++) {
           generate_popular_songs(array_24songs.data[i], i + 1);
@@ -263,3 +269,24 @@ const fetch_name_artist = () => {
 
     .catch(err => console.log(err));
 };
+
+
+const generate_card_artist = (track) => {
+  const card_artist = document.getElementById('card-artist')
+
+  const div = document.createElement('div')
+  div.className = 'rounded-3 my-5 mx-3'
+  div.style = `
+  height: 420px;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0), black ), url(${track.artist.picture_xl});
+  background-size: cover;`
+
+  const p = document.createElement('p')
+  p.className = 'lead text-secondary p-3'
+  p.innerText = track.title
+
+  div.appendChild(p)
+  card_artist.append(div)
+
+}
