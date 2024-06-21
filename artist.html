@@ -1,182 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="./assets/dist/css/artist.min.css" />
+    <link rel="icon" href="https://www.vectorlogo.zone/logos/spotify/spotify-icon.svg" type="image/x-icon" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spotify - Web Player: Music for everyone</title>
-  <link rel="stylesheet" href="./assets/dist/css/artist.min.css" />
-</head>
-
-<body data-bs-theme="dark">
-  <main>
-    <div class="container-fluid">
-      <div class="row g-2">
-        <aside class="d-none d-lg-block col-lg-4 col-xl-3">
-          <div class="d-flex flex-column rounded-3 bg-primary mt-2">
-            <div id="index" class="d-flex gap-2 pt-3 ms-3">
-              <a href="./index.html"
-                class="d-flex justify-content-center gap-2 text-secondary pb-3 link-underline link-underline-opacity-0 active"
-                aria-current="true">
-                <svg data-encore-id="icon" role="img" aria-hidden="true"
-                  class="Svg-sc-ytk21e-0 bneLcE home-icon QbaKKdcHNA2x3_YJvpYu" viewBox="0 0 24 24" width="24"
-                  height="24">
-                  <path
-                    d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z">
-                  </path>
-                </svg>
-                Home</a>
-            </div>
-            <div id="search" class="d-flex gap-2 ms-3">
-              <a href="./search.html" class="d-flex gap-2 text-secondary pb-3 link-underline link-underline-opacity-0">
-                <svg data-encore-id="icon" role="img" aria-hidden="true"
-                  class="Svg-sc-ytk21e-0 bneLcE search-icon QbaKKdcHNA2x3_YJvpYu" viewBox="0 0 24 24" width="24"
-                  height="24" fill="#A7A7A7">
-                  <path
-                    d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z">
-                  </path>
-                </svg>
-                Search</a>
-            </div>
-          </div>
-          <div id="library-block" class="d-flex flex-column rounded-3 bg-primary mt-2">
-            <div class="d-flex gap-2 pt-3 ms-3 align-items-center mb-3">
-              <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"
-                class="Svg-sc-ytk21e-0 bneLcE" width="24" height="24" fill="white">
-                <path
-                  d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z">
-                </path>
-              </svg>
-              <a href="" class="text-light link-underline link-underline-opacity-0">Your Library</a>
-              <path
-                d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z">
-              </path><svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                class="Svg-sc-ytk21e-0 dYnaPI ms-auto" width="15" height="15" fill="#A7A7A7">
-                <path
-                  d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z">
-                </path>
-              </svg>
-              <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                class="Svg-sc-ytk21e-0 cAMMLk me-3" width="15" height="15" fill="#A7A7A7">
-                <path
-                  d="M7.19 1A.749.749 0 0 1 8.47.47L16 7.99l-7.53 7.521a.75.75 0 0 1-1.234-.815.75.75 0 0 1 .174-.243l5.72-5.714H.75a.75.75 0 1 1 0-1.498h12.38L7.41 1.529a.749.749 0 0 1-.22-.53z">
-                </path>
-              </svg>
-            </div>
-            <div class="mx-2 mb-2">
-              <button class="btn btn-info rounded-pill px-2 py-1">Playlists</button>
-              <button class="btn btn-info rounded-pill px-2 py-1">Artists</button>
-              <button class="btn btn-info rounded-pill px-2 py-1">Albums</button>
-            </div>
-            <div id="library-list" class="scrollable">
-              <div class="d-flex mx-3 gap-1 align-items-center pb-3">
-                <svg data-encore-id="icon" role="img" aria-hidden="true"
-                  class="Svg-sc-ytk21e-0 bneLcE search-icon QbaKKdcHNA2x3_YJvpYu" viewBox="0 0 24 24" width="15"
-                  height="15" fill="#A7A7A7">
-                  <path
-                    d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z">
-                  </path>
-                </svg>
-                <p class="text-secondary mb-0 ms-auto">Recents</p>
-                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 cAMMLk" width="15" height="15" fill="#A7A7A7">
-                  <path
-                    d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z">
-                  </path>
-                </svg>
+  <body data-bs-theme="dark">
+    <main>
+      <div class="container-fluid">
+        <div class="row g-2">
+          <aside class="d-none d-lg-block col-lg-4 col-xl-3">
+            <div class="d-flex flex-column rounded-3 bg-primary mt-2">
+              <div id="index" class="d-flex gap-2 pt-3 ms-3">
+                <a
+                  href="./index.html"
+                  class="d-flex justify-content-center gap-2 text-secondary pb-3 link-underline link-underline-opacity-0 active"
+                  aria-current="true"
+                >
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    class="Svg-sc-ytk21e-0 bneLcE home-icon QbaKKdcHNA2x3_YJvpYu"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path
+                      d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z"
+                    ></path>
+                  </svg>
+                  Home</a
+                >
+              </div>
+              <div id="search" class="d-flex gap-2 ms-3">
+                <a
+                  href="./search.html"
+                  class="d-flex gap-2 text-secondary pb-3 link-underline link-underline-opacity-0"
+                >
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    class="Svg-sc-ytk21e-0 bneLcE search-icon QbaKKdcHNA2x3_YJvpYu"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="#A7A7A7"
+                  >
+                    <path
+                      d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                    ></path>
+                  </svg>
+                  Search</a
+                >
               </div>
             </div>
-          </div>
-        </aside>
-        <div id="body-artist" class="col-12 col-lg-8 col-xl-6 rounded-3 rounded-3">
-          <div id="header-artist" class="mt-2 rounded-top-3 d-flex flex-column justify-content-between">
-            <div class="container-fluid">
-              <div class="d-flex justify-content-between mt-3">
-                <div>
-                  <svg data-encore-id="icon" role="img" aria-hidden="true"
-                    class="Svg-sc-ytk21e-0 cAMMLk IYDlXmBmmUKHveMzIPCF bg-info rounded-circle p-2" viewBox="0 0 16 16"
-                    width="30" fill="white">
+            <div id="library-block" class="d-flex flex-column rounded-3 bg-primary mt-2">
+              <div class="d-flex gap-2 pt-3 ms-3 align-items-center mb-3">
+                <svg
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  class="Svg-sc-ytk21e-0 bneLcE"
+                  width="24"
+                  height="24"
+                  fill="white"
+                >
+                  <path
+                    d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                  ></path>
+                </svg>
+                <a href="" class="text-light link-underline link-underline-opacity-0">Your Library</a>
+                <path
+                  d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z"
+                >
+                </path
+                ><svg
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  class="Svg-sc-ytk21e-0 dYnaPI ms-auto"
+                  width="15"
+                  height="15"
+                  fill="#A7A7A7"
+                >
+                  <path
+                    d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z"
+                  ></path>
+                </svg>
+                <svg
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  class="Svg-sc-ytk21e-0 cAMMLk me-3"
+                  width="15"
+                  height="15"
+                  fill="#A7A7A7"
+                >
+                  <path
+                    d="M7.19 1A.749.749 0 0 1 8.47.47L16 7.99l-7.53 7.521a.75.75 0 0 1-1.234-.815.75.75 0 0 1 .174-.243l5.72-5.714H.75a.75.75 0 1 1 0-1.498h12.38L7.41 1.529a.749.749 0 0 1-.22-.53z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="mx-2 mb-2">
+                <button class="btn btn-info rounded-pill px-2 py-1">Playlists</button>
+                <button class="btn btn-info rounded-pill px-2 py-1">Artists</button>
+                <button class="btn btn-info rounded-pill px-2 py-1">Albums</button>
+              </div>
+              <div id="library-list" class="scrollable">
+                <div class="d-flex mx-3 gap-1 align-items-center pb-3">
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    class="Svg-sc-ytk21e-0 bneLcE search-icon QbaKKdcHNA2x3_YJvpYu"
+                    viewBox="0 0 24 24"
+                    width="15"
+                    height="15"
+                    fill="#A7A7A7"
+                  >
                     <path
-                      d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z">
-                    </path>
+                      d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                    ></path>
+                  </svg>
+                  <p class="text-secondary mb-0 ms-auto">Recents</p>
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 cAMMLk"
+                    width="15"
+                    height="15"
+                    fill="#A7A7A7"
+                  >
+                    <path
+                      d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z"
+                    ></path>
                   </svg>
                 </div>
-                <div class="d-flex align-items-center gap-2">
-                  <button class="btn bg-info py-1 rounded-pill d-flex align-items-center gap-1">
-                    <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                      class="Svg-sc-ytk21e-0 dYnaPI" width="20" fill="white">
-                      <path
-                        d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528a.945.945 0 0 1-.005-.005L4.995 9.805a.75.75 0 0 1 0-1.06z">
-                      </path>
-                      <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z"></path>
-                    </svg>
-                    Install app
-                  </button>
+              </div>
+            </div>
+          </aside>
+          <div id="body-artist" class="col-12 col-lg-8 col-xl-6 rounded-3 rounded-3">
+            <div id="header-artist" class="mt-2 rounded-top-3 d-flex flex-column justify-content-between">
+              <div class="container-fluid">
+                <div class="d-flex justify-content-between mt-3">
                   <div>
-                    <a href="">
-                      <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                        class="Svg-sc-ytk21e-0 dYnaPI" width="15" fill="white">
+                    <svg
+                      data-encore-id="icon"
+                      role="img"
+                      aria-hidden="true"
+                      class="Svg-sc-ytk21e-0 cAMMLk IYDlXmBmmUKHveMzIPCF bg-info rounded-circle p-2"
+                      viewBox="0 0 16 16"
+                      width="30"
+                      fill="white"
+                    >
+                      <path
+                        d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <button class="btn bg-info py-1 rounded-pill d-flex align-items-center gap-1">
+                      <svg
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        viewBox="0 0 16 16"
+                        class="Svg-sc-ytk21e-0 dYnaPI"
+                        width="20"
+                        fill="white"
+                      >
                         <path
-                          d="M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z">
-                        </path>
+                          d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528a.945.945 0 0 1-.005-.005L4.995 9.805a.75.75 0 0 1 0-1.06z"
+                        ></path>
+                        <path
+                          d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z"
+                        ></path>
                       </svg>
-                    </a>
-                  </div>
+                      Install app
+                    </button>
+                    <div>
+                      <a href="">
+                        <svg
+                          data-encore-id="icon"
+                          role="img"
+                          aria-hidden="true"
+                          viewBox="0 0 16 16"
+                          class="Svg-sc-ytk21e-0 dYnaPI"
+                          width="15"
+                          fill="white"
+                        >
+                          <path
+                            d="M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
 
-                  <!-- <div>icona-profilo</div> -->
+                    <!-- <div>icona-profilo</div> -->
+                  </div>
                 </div>
+              </div>
+
+              <div class="container-fluid mb-3">
+                <p id="verified-artist" class="m-0 title d-flex align-items-center gap-2">
+                  <span
+                    ><svg
+                      data-encore-id="icon"
+                      role="img"
+                      aria-hidden="true"
+                      class="Svg-sc-ytk21e-0 gxNUVX b0NcxAbHvRbqgs2S8QDg"
+                      viewBox="0 0 24 24"
+                      width="26"
+                      fill="#3D91F4"
+                    >
+                      <path
+                        d="M10.814.5a1.658 1.658 0 0 1 2.372 0l2.512 2.572 3.595-.043a1.658 1.658 0 0 1 1.678 1.678l-.043 3.595 2.572 2.512c.667.65.667 1.722 0 2.372l-2.572 2.512.043 3.595a1.658 1.658 0 0 1-1.678 1.678l-3.595-.043-2.512 2.572a1.658 1.658 0 0 1-2.372 0l-2.512-2.572-3.595.043a1.658 1.658 0 0 1-1.678-1.678l.043-3.595L.5 13.186a1.658 1.658 0 0 1 0-2.372l2.572-2.512-.043-3.595a1.658 1.658 0 0 1 1.678-1.678l3.595.043L10.814.5zm6.584 9.12a1 1 0 0 0-1.414-1.413l-6.011 6.01-1.894-1.893a1 1 0 0 0-1.414 1.414l3.308 3.308 7.425-7.425z"
+                      ></path></svg
+                  ></span>
+                  Verified artist
+                </p>
+                <h1 id="name-artist" class="display-1 mb-5"></h1>
               </div>
             </div>
 
-            <div class="container-fluid mb-3">
-              <p id="verified-artist" class="m-0 title d-flex align-items-center gap-2">
-                <span><svg data-encore-id="icon" role="img" aria-hidden="true"
-                    class="Svg-sc-ytk21e-0 gxNUVX b0NcxAbHvRbqgs2S8QDg" viewBox="0 0 24 24" width="26" fill="#3D91F4">
+            <div id="main-artist" class="container">
+              <section id="interaction-section" class="d-flex justify-content-start align-items-center gap-3 mt-3 ms-3">
+                <div>
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    class="Svg-sc-ytk21e-0 bneLcE bg-success rounded-circle p-3"
+                    width="50"
+                    fill="black"
+                  >
                     <path
-                      d="M10.814.5a1.658 1.658 0 0 1 2.372 0l2.512 2.572 3.595-.043a1.658 1.658 0 0 1 1.678 1.678l-.043 3.595 2.572 2.512c.667.65.667 1.722 0 2.372l-2.572 2.512.043 3.595a1.658 1.658 0 0 1-1.678 1.678l-3.595-.043-2.512 2.572a1.658 1.658 0 0 1-2.372 0l-2.512-2.572-3.595.043a1.658 1.658 0 0 1-1.678-1.678l.043-3.595L.5 13.186a1.658 1.658 0 0 1 0-2.372l2.572-2.512-.043-3.595a1.658 1.658 0 0 1 1.678-1.678l3.595.043L10.814.5zm6.584 9.12a1 1 0 0 0-1.414-1.413l-6.011 6.01-1.894-1.893a1 1 0 0 0-1.414 1.414l3.308 3.308 7.425-7.425z">
-                    </path>
-                  </svg></span>
-                Verified artist
-              </p>
-              <h1 id="name-artist" class="display-1 mb-5"></h1>
-            </div>
-          </div>
-
-          <div id="main-artist" class="container">
-            <section id="interaction-section" class="d-flex justify-content-start align-items-center gap-3 mt-3 ms-3">
-              <div>
-                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"
-                  class="Svg-sc-ytk21e-0 bneLcE bg-success rounded-circle p-3" width="50" fill="black">
-                  <path
-                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
-                  </path>
-                </svg>
-              </div>
-              <div>
-                <button class="btn btn-outline-secondary rounded-pill">Follow</button>
-              </div>
-              <div>
-                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"
-                  class="Svg-sc-ytk21e-0 cqasRA" width="40" fill="grey">
-                  <path
-                    d="M4.5 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm15 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-7.5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
-                  </path>
-                </svg>
-              </div>
-            </section>
-
-            <section class="my-5" id="populars-section">
-              <div class="row">
-                <div class="container-fluid col-12">
-                  <h2>Populars</h2>
-
-                  <div id="popular-songs" class="d-flex flex-column gap-2 mt-4">
-                    <!-- inseriamo una lista delle canzoni più popolari -->
-                  </div>
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                    ></path>
+                  </svg>
                 </div>
+                <div>
+                  <button class="btn btn-outline-secondary rounded-pill">Follow</button>
+                </div>
+                <div>
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    class="Svg-sc-ytk21e-0 cqasRA"
+                    width="40"
+                    fill="grey"
+                  >
+                    <path
+                      d="M4.5 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm15 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-7.5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
+                    ></path>
+                  </svg>
+                </div>
+              </section>
 
-                <div id="last-album" class="p-5 d-md-none d-lg-block col-12">
-                  <!-- <div class="position-relative overflow-hidden bg-gradient">
+              <section class="my-5" id="populars-section">
+                <div class="row">
+                  <div class="container-fluid col-12">
+                    <h2>Populars</h2>
+
+                    <div id="popular-songs" class="d-flex flex-column gap-2 mt-4">
+                      <!-- inseriamo una lista delle canzoni più popolari -->
+                    </div>
+                  </div>
+
+                  <div id="last-album" class="p-5 d-md-none d-lg-block col-12">
+                    <!-- <div class="position-relative overflow-hidden bg-gradient">
                         <img class="position-absolute w-100 z-n1" src="data:image/jpeg;base64,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" alt="">
                         <div class="z-1">
   
@@ -187,25 +292,25 @@
                       
                       
                       </div> -->
+                  </div>
                 </div>
-              </div>
-            </section>
+              </section>
 
-            <section id="discography-section">
-              <div class="d-flex justify-content-between align-items-center">
-                <h2>Discography</h2>
-                <a class="link-item" href="#">show all</a>
-              </div>
-              <div>
-                <button class="btn p-1 px-2 bg-info rounded-pill">Popular releases</button>
-                <button class="btn p-1 px-2 bg-info rounded-pill">Albums</button>
-                <button class="btn p-1 px-2 bg-info rounded-pill">Singles & EPs</button>
-              </div>
+              <section id="discography-section">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h2>Discography</h2>
+                  <a class="link-item" href="#">show all</a>
+                </div>
+                <div>
+                  <button class="btn p-1 px-2 bg-info rounded-pill">Popular releases</button>
+                  <button class="btn p-1 px-2 bg-info rounded-pill">Albums</button>
+                  <button class="btn p-1 px-2 bg-info rounded-pill">Singles & EPs</button>
+                </div>
 
-              <!-- qui andranno inserite le prime card, ossia quelle contenenti: albums, popular releases, singles & EPs -->
+                <!-- qui andranno inserite le prime card, ossia quelle contenenti: albums, popular releases, singles & EPs -->
 
-              <div id="discography-container" class="row py-4">
-                <!-- <div class="col-3 p-0">
+                <div id="discography-container" class="row py-4">
+                  <!-- <div class="col-3 p-0">
                       <div class="card p-3">
                         <img
                           src="data:image/jpeg;base64,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"
@@ -219,12 +324,11 @@
                         </div>
                       </div>
                     </div> -->
-              </div>
-            </section>
+                </div>
+              </section>
 
-            <section id="card-artist">
-
-              <!-- <div class=" rounded-3 my-5 mx-3 " style="">
+              <section id="card-artist">
+                <!-- <div class=" rounded-3 my-5 mx-3 " style="">
                   <p class="lead text-secondary p-3">Take Me Back To Eden - May 19th. https://www.sleep-token.com/
                   </p>
   
@@ -232,385 +336,572 @@
   
   
                 </div> -->
+              </section>
+            </div>
 
-            </section>
-          </div>
-
-          <footer id="footer" class="container">
-            <div class="row mb-5">
-              <div class="col-md-6 col-lg-4 col-xl-2">
-                <h6>Company</h6>
-                <div class="d-flex flex-column">
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">About</a>
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Jobs</a>
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">For the Record</a>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-2">
-                <h6>Communities</h6>
-                <div class="d-flex flex-column">
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">For Artists</a>
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Developers</a>
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Advertising</a>
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Investors</a>
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Vendors</a>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-2">
-                <h6>Useful links</h6>
-                <div class="d-flex flex-column">
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Support</a>
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Free Mobile App</a>
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Consumer rights</a>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-2">
-                <h6>Spotify Plans</h6>
-                <div class="d-flex flex-column">
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Premium Individual</a>
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Premium Duo</a>
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Premium Family</a>
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Premium Student</a>
-                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Spotify Free</a>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-4 ms-xl-auto">
-                <div class="d-flex justify-content-end gap-2">
-                  <div class="social">
-                    <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                      class="Svg-sc-ytk21e-0 dCAvla">
-                      <path
-                        d="M8 1.44c2.136 0 2.389.009 3.233.047.78.036 1.203.166 1.485.276.348.128.663.332.921.598.266.258.47.573.599.921.11.282.24.706.275 1.485.039.844.047 1.097.047 3.233s-.008 2.389-.047 3.232c-.035.78-.166 1.204-.275 1.486a2.654 2.654 0 0 1-1.518 1.518c-.282.11-.706.24-1.486.275-.843.039-1.097.047-3.233.047s-2.39-.008-3.232-.047c-.78-.035-1.204-.165-1.486-.275a2.477 2.477 0 0 1-.921-.599 2.477 2.477 0 0 1-.599-.92c-.11-.282-.24-.706-.275-1.486-.038-.844-.047-1.096-.047-3.232s.009-2.39.047-3.233c.036-.78.166-1.203.275-1.485.129-.348.333-.663.599-.921a2.49 2.49 0 0 1 .92-.599c.283-.11.707-.24 1.487-.275.843-.038 1.096-.047 3.232-.047L8 1.441zm.001-1.442c-2.172 0-2.445.01-3.298.048-.854.04-1.435.176-1.943.373a3.928 3.928 0 0 0-1.417.923c-.407.4-.722.883-.923 1.417-.198.508-.333 1.09-.372 1.942C.01 5.552 0 5.826 0 8c0 2.172.01 2.445.048 3.298.04.853.174 1.433.372 1.941.2.534.516 1.017.923 1.417.4.407.883.722 1.417.923.508.198 1.09.333 1.942.372.852.039 1.126.048 3.299.048 2.172 0 2.445-.01 3.298-.048.853-.04 1.433-.174 1.94-.372a4.087 4.087 0 0 0 2.34-2.34c.199-.508.334-1.09.373-1.942.039-.851.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.853-.174-1.433-.372-1.94a3.924 3.924 0 0 0-.923-1.418A3.928 3.928 0 0 0 13.24.42c-.508-.197-1.09-.333-1.942-.371-.851-.041-1.125-.05-3.298-.05l.001-.001z">
-                      </path>
-                      <path
-                        d="M8 3.892a4.108 4.108 0 1 0 0 8.216 4.108 4.108 0 0 0 0-8.216zm0 6.775a2.668 2.668 0 1 1 0-5.335 2.668 2.668 0 0 1 0 5.335zm4.27-5.978a.96.96 0 1 0 0-1.92.96.96 0 0 0 0 1.92z">
-                      </path>
-                    </svg>
-                  </div>
-                  <div class="social">
-                    <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                      class="Svg-sc-ytk21e-0 dCAvla">
-                      <path
-                        d="M13.54 3.889a2.968 2.968 0 0 0 1.333-1.683 5.937 5.937 0 0 1-1.929.738 2.992 2.992 0 0 0-.996-.706 2.98 2.98 0 0 0-1.218-.254 2.92 2.92 0 0 0-2.143.889 2.929 2.929 0 0 0-.889 2.15c0 .212.027.442.08.691a8.475 8.475 0 0 1-3.484-.932A8.536 8.536 0 0 1 1.532 2.54a2.993 2.993 0 0 0-.413 1.523c0 .519.12 1 .361 1.445.24.445.57.805.988 1.08a2.873 2.873 0 0 1-1.373-.374v.04c0 .725.23 1.365.69 1.92a2.97 2.97 0 0 0 1.739 1.048 2.937 2.937 0 0 1-1.365.056 2.94 2.94 0 0 0 1.063 1.5 2.945 2.945 0 0 0 1.77.603 5.944 5.944 0 0 1-3.77 1.302c-.243 0-.484-.016-.722-.048A8.414 8.414 0 0 0 5.15 14c.905 0 1.763-.12 2.572-.361.81-.24 1.526-.57 2.147-.988a9.044 9.044 0 0 0 1.683-1.46c.5-.556.911-1.155 1.234-1.798a9.532 9.532 0 0 0 .738-1.988 8.417 8.417 0 0 0 .246-2.429 6.177 6.177 0 0 0 1.508-1.563c-.56.249-1.14.407-1.738.476z">
-                      </path>
-                    </svg>
-                  </div>
-                  <div class="social">
-                    <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                      class="Svg-sc-ytk21e-0 dYnaPI">
-                      <path
-                        d="M16 8a8 8 0 1 0-9.25 7.903v-5.59H4.719V8H6.75V6.237c0-2.005 1.194-3.112 3.022-3.112.875 0 1.79.156 1.79.156V5.25h-1.008c-.994 0-1.304.617-1.304 1.25V8h2.219l-.355 2.313H9.25v5.59A8.002 8.002 0 0 0 16 8z">
-                      </path>
-                    </svg>
+            <footer id="footer" class="container">
+              <div class="row mb-5">
+                <div class="col-md-6 col-lg-4 col-xl-2">
+                  <h6>Company</h6>
+                  <div class="d-flex flex-column">
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">About</a>
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">Jobs</a>
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">For the Record</a>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="row mb-5 container-fluid">
-              <hr />
-              <div class="col-9 d-flex gap-3 flex-wrap">
-                <a href="" class="text-secondary link-underline link-underline-opacity-0">Legal</a>
-                <a href="" class="text-secondary link-underline link-underline-opacity-0">Safety & Privacy Center</a>
-                <a href="" class="text-secondary link-underline link-underline-opacity-0">Privacy Policy</a>
-                <a href="" class="text-secondary link-underline link-underline-opacity-0">Cookie Settings</a>
-                <a href="" class="text-secondary link-underline link-underline-opacity-0">About Ads</a>
-                <a href="" class="text-secondary link-underline link-underline-opacity-0">Accessibility</a>
-              </div>
-              <div class="col-3 d-flex justify-content-end">
-                <p class="text-secondary">&copy 2024 Spotify AB</p>
-              </div>
-            </div>
-          </footer>
-        </div>
-        <aside class="d-none d-xl-block col-lg-3">
-          <div id="song-info-block" class="d-flex flex-column rounded-3 bg-primary mt-2">
-            <div class="d-flex gap-4 pt-3 ms-3 align-items-center mb-3">
-              <h3 class="h6 mb-0">Nome Canzone</h3>
-              <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                class="Svg-sc-ytk21e-0 dYnaPI ms-auto" width="17" height="17" fill="#A7A7A7">
-                <path
-                  d="M3 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm6.5 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM16 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z">
-                </path>
-              </svg>
-              <button type="button" class="btn-close me-3" aria-label="Close"></button>
-            </div>
-            <div class="scrollable">
-              <div class="song-card d-flex flex-column justify-content-center p-3 gap-2">
-                <img src="./assets/imgs/main/image-1.jpg" alt="" class="rounded-3" />
-                <div class="d-flex align-items-center">
-                  <div id="song-card-info">
-                    <h2>Titolo Canzone</h2>
-                    <h3 class="h6">Artista</h3>
-                  </div>
-                  <div class="ms-auto">
-                    <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                      class="Svg-sc-ytk21e-0 dYnaPI" width="17" height="17" fill="white">
-                      <path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"></path>
-                      <path
-                        d="M11.75 8a.75.75 0 0 1-.75.75H8.75V11a.75.75 0 0 1-1.5 0V8.75H5a.75.75 0 0 1 0-1.5h2.25V5a.75.75 0 0 1 1.5 0v2.25H11a.75.75 0 0 1 .75.75z">
-                      </path>
-                    </svg>
+                <div class="col-md-6 col-lg-4 col-xl-2">
+                  <h6>Communities</h6>
+                  <div class="d-flex flex-column">
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">For Artists</a>
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">Developers</a>
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">Advertising</a>
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">Investors</a>
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">Vendors</a>
                   </div>
                 </div>
-              </div>
-              <div class="d-flex justify-content-center p-3">
-                <div class="card border-0">
-                  <img src="./assets/imgs/main/image-1.jpg" class="card-img-top" alt="..." />
-                  <p class="position-absolute top-0 mt-3 ms-3">About the artist</p>
-                  <div class="card-body bg-info rounded-3">
-                    <h5 class="card-title">Artista</h5>
-                    <div class="d-flex align-items-center">
-                      <p class="text-secondary mb-0">111,963 monthly listeners</p>
-                      <button class="btn btn-outline-light rounded-pill px-2 py-1 ms-auto">Follow</button>
+                <div class="col-md-6 col-lg-4 col-xl-2">
+                  <h6>Useful links</h6>
+                  <div class="d-flex flex-column">
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">Support</a>
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">Free Mobile App</a>
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">Consumer rights</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-2">
+                  <h6>Spotify Plans</h6>
+                  <div class="d-flex flex-column">
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">Premium Individual</a>
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">Premium Duo</a>
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">Premium Family</a>
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">Premium Student</a>
+                    <a href="" class="text-secondary link-underline link-underline-opacity-0">Spotify Free</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-4 ms-xl-auto">
+                  <div class="d-flex justify-content-end gap-2">
+                    <div class="social">
+                      <svg
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        viewBox="0 0 16 16"
+                        class="Svg-sc-ytk21e-0 dCAvla"
+                      >
+                        <path
+                          d="M8 1.44c2.136 0 2.389.009 3.233.047.78.036 1.203.166 1.485.276.348.128.663.332.921.598.266.258.47.573.599.921.11.282.24.706.275 1.485.039.844.047 1.097.047 3.233s-.008 2.389-.047 3.232c-.035.78-.166 1.204-.275 1.486a2.654 2.654 0 0 1-1.518 1.518c-.282.11-.706.24-1.486.275-.843.039-1.097.047-3.233.047s-2.39-.008-3.232-.047c-.78-.035-1.204-.165-1.486-.275a2.477 2.477 0 0 1-.921-.599 2.477 2.477 0 0 1-.599-.92c-.11-.282-.24-.706-.275-1.486-.038-.844-.047-1.096-.047-3.232s.009-2.39.047-3.233c.036-.78.166-1.203.275-1.485.129-.348.333-.663.599-.921a2.49 2.49 0 0 1 .92-.599c.283-.11.707-.24 1.487-.275.843-.038 1.096-.047 3.232-.047L8 1.441zm.001-1.442c-2.172 0-2.445.01-3.298.048-.854.04-1.435.176-1.943.373a3.928 3.928 0 0 0-1.417.923c-.407.4-.722.883-.923 1.417-.198.508-.333 1.09-.372 1.942C.01 5.552 0 5.826 0 8c0 2.172.01 2.445.048 3.298.04.853.174 1.433.372 1.941.2.534.516 1.017.923 1.417.4.407.883.722 1.417.923.508.198 1.09.333 1.942.372.852.039 1.126.048 3.299.048 2.172 0 2.445-.01 3.298-.048.853-.04 1.433-.174 1.94-.372a4.087 4.087 0 0 0 2.34-2.34c.199-.508.334-1.09.373-1.942.039-.851.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.853-.174-1.433-.372-1.94a3.924 3.924 0 0 0-.923-1.418A3.928 3.928 0 0 0 13.24.42c-.508-.197-1.09-.333-1.942-.371-.851-.041-1.125-.05-3.298-.05l.001-.001z"
+                        ></path>
+                        <path
+                          d="M8 3.892a4.108 4.108 0 1 0 0 8.216 4.108 4.108 0 0 0 0-8.216zm0 6.775a2.668 2.668 0 1 1 0-5.335 2.668 2.668 0 0 1 0 5.335zm4.27-5.978a.96.96 0 1 0 0-1.92.96.96 0 0 0 0 1.92z"
+                        ></path>
+                      </svg>
                     </div>
-                    <p class="card-text text-secondary mt-3">Descrizione artista</p>
+                    <div class="social">
+                      <svg
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        viewBox="0 0 16 16"
+                        class="Svg-sc-ytk21e-0 dCAvla"
+                      >
+                        <path
+                          d="M13.54 3.889a2.968 2.968 0 0 0 1.333-1.683 5.937 5.937 0 0 1-1.929.738 2.992 2.992 0 0 0-.996-.706 2.98 2.98 0 0 0-1.218-.254 2.92 2.92 0 0 0-2.143.889 2.929 2.929 0 0 0-.889 2.15c0 .212.027.442.08.691a8.475 8.475 0 0 1-3.484-.932A8.536 8.536 0 0 1 1.532 2.54a2.993 2.993 0 0 0-.413 1.523c0 .519.12 1 .361 1.445.24.445.57.805.988 1.08a2.873 2.873 0 0 1-1.373-.374v.04c0 .725.23 1.365.69 1.92a2.97 2.97 0 0 0 1.739 1.048 2.937 2.937 0 0 1-1.365.056 2.94 2.94 0 0 0 1.063 1.5 2.945 2.945 0 0 0 1.77.603 5.944 5.944 0 0 1-3.77 1.302c-.243 0-.484-.016-.722-.048A8.414 8.414 0 0 0 5.15 14c.905 0 1.763-.12 2.572-.361.81-.24 1.526-.57 2.147-.988a9.044 9.044 0 0 0 1.683-1.46c.5-.556.911-1.155 1.234-1.798a9.532 9.532 0 0 0 .738-1.988 8.417 8.417 0 0 0 .246-2.429 6.177 6.177 0 0 0 1.508-1.563c-.56.249-1.14.407-1.738.476z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="social">
+                      <svg
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        viewBox="0 0 16 16"
+                        class="Svg-sc-ytk21e-0 dYnaPI"
+                      >
+                        <path
+                          d="M16 8a8 8 0 1 0-9.25 7.903v-5.59H4.719V8H6.75V6.237c0-2.005 1.194-3.112 3.022-3.112.875 0 1.79.156 1.79.156V5.25h-1.008c-.994 0-1.304.617-1.304 1.25V8h2.219l-.355 2.313H9.25v5.59A8.002 8.002 0 0 0 16 8z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-5 container-fluid">
+                <hr />
+                <div class="col-9 d-flex gap-3 flex-wrap">
+                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Legal</a>
+                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Safety & Privacy Center</a>
+                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Privacy Policy</a>
+                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Cookie Settings</a>
+                  <a href="" class="text-secondary link-underline link-underline-opacity-0">About Ads</a>
+                  <a href="" class="text-secondary link-underline link-underline-opacity-0">Accessibility</a>
+                </div>
+                <div class="col-3 d-flex justify-content-end">
+                  <p class="text-secondary">&copy 2024 Spotify AB</p>
+                </div>
+              </div>
+            </footer>
+          </div>
+          <aside class="d-none d-xl-block col-lg-3">
+            <div id="song-info-block" class="d-flex flex-column rounded-3 bg-primary mt-2">
+              <div class="d-flex gap-4 pt-3 ms-3 align-items-center mb-3">
+                <h3 class="h6 mb-0">Nome Canzone</h3>
+                <svg
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  class="Svg-sc-ytk21e-0 dYnaPI ms-auto"
+                  width="17"
+                  height="17"
+                  fill="#A7A7A7"
+                >
+                  <path
+                    d="M3 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm6.5 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM16 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                  ></path>
+                </svg>
+                <button type="button" class="btn-close me-3" aria-label="Close"></button>
+              </div>
+              <div class="scrollable">
+                <div class="song-card d-flex flex-column justify-content-center p-3 gap-2">
+                  <img src="./assets/imgs/main/image-1.jpg" alt="" class="rounded-3" />
+                  <div class="d-flex align-items-center">
+                    <div id="song-card-info">
+                      <h2>Titolo Canzone</h2>
+                      <h3 class="h6">Artista</h3>
+                    </div>
+                    <div class="ms-auto">
+                      <svg
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        viewBox="0 0 16 16"
+                        class="Svg-sc-ytk21e-0 dYnaPI"
+                        width="17"
+                        height="17"
+                        fill="white"
+                      >
+                        <path
+                          d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+                        ></path>
+                        <path
+                          d="M11.75 8a.75.75 0 0 1-.75.75H8.75V11a.75.75 0 0 1-1.5 0V8.75H5a.75.75 0 0 1 0-1.5h2.25V5a.75.75 0 0 1 1.5 0v2.25H11a.75.75 0 0 1 .75.75z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center p-3">
+                  <div class="card border-0">
+                    <img src="./assets/imgs/main/image-1.jpg" class="card-img-top" alt="..." />
+                    <p class="position-absolute top-0 mt-3 ms-3">About the artist</p>
+                    <div class="card-body bg-info rounded-3">
+                      <h5 class="card-title">Artista</h5>
+                      <div class="d-flex align-items-center">
+                        <p class="text-secondary mb-0">111,963 monthly listeners</p>
+                        <button class="btn btn-outline-light rounded-pill px-2 py-1 ms-auto">Follow</button>
+                      </div>
+                      <p class="card-text text-secondary mt-3">Descrizione artista</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </main>
-  <footer id="mobile-nav" class="d-lg-none py-3">
-    <div id="mobile-player" class="py-2 mx-3 rounded-3 mb-3 position-relative">
-      <div class="container-fluid">
-        <div class="d-flex gap-1 align-items-center">
-          <div class="">
-            <div class="library-img">
-              <img src="./assets/imgs/main/image-1.jpg" alt="album" class="rounded-3" />
-            </div>
-          </div>
-          <div class="">
-            <div class="d-flex flex-column">
-              <a class="link-underline link-underline-opacity-0 mb-1 text-light">Nome Brano</a>
-              <a class="link-underline link-underline-opacity-0 mb-0 text-secondary">Nome Artista</a>
-            </div>
-          </div>
-          <div class="d-flex gap-4 ms-auto me-1">
-            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE">
-              <path
-                d="M5.21 1.57a6.757 6.757 0 0 1 6.708 1.545.124.124 0 0 0 .165 0 6.741 6.741 0 0 1 5.715-1.78l.004.001a6.802 6.802 0 0 1 5.571 5.376v.003a6.689 6.689 0 0 1-1.49 5.655l-7.954 9.48a2.518 2.518 0 0 1-3.857 0L2.12 12.37A6.683 6.683 0 0 1 .627 6.714 6.757 6.757 0 0 1 5.21 1.57zm3.12 1.803a4.757 4.757 0 0 0-5.74 3.725l-.001.002a4.684 4.684 0 0 0 1.049 3.969l.009.01 7.958 9.485a.518.518 0 0 0 .79 0l7.968-9.495a4.688 4.688 0 0 0 1.049-3.965 4.803 4.803 0 0 0-3.931-3.794 4.74 4.74 0 0 0-4.023 1.256l-.008.008a2.123 2.123 0 0 1-2.9 0l-.007-.007a4.757 4.757 0 0 0-2.214-1.194z">
-              </path>
-            </svg>
-            <svg class="active" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-              class="Svg-sc-ytk21e-0 dYnaPI">
-              <path
-                d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z">
-              </path>
-            </svg>
-          </div>
-
-          <div class="progress song-progress-bar position-absolute bottom-0" role="progressbar"
-            aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar bg-success" style="width: 50%"></div>
-          </div>
+          </aside>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-3">
-          <div class="d-flex flex-column align-items-center justify-content-center">
-            <svg class="active" data-encore-id="icon" role="img" aria-hidden="true"
-              class="Svg-sc-ytk21e-0 bneLcE home-active-icon QbaKKdcHNA2x3_YJvpYu" viewBox="0 0 24 24">
-              <path
-                d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z">
-              </path>
-            </svg>
-            <a href="" class="text-light link-underline link-underline-opacity-0">Home</a>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="d-flex flex-column align-items-center justify-content-center">
-            <svg data-encore-id="icon" role="img" aria-hidden="true"
-              class="Svg-sc-ytk21e-0 bneLcE search-icon QbaKKdcHNA2x3_YJvpYu" viewBox="0 0 24 24">
-              <path
-                d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z">
-              </path>
-            </svg>
-            <a href="./search.html" class="text-secondary link-underline link-underline-opacity-0">Search</a>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="d-flex flex-column align-items-center justify-content-center">
-            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE">
-              <path
-                d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z">
-              </path>
-            </svg>
-            <a href="" class="text-secondary link-underline link-underline-opacity-0">Library</a>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="d-flex flex-column align-items-center justify-content-center">
-            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE">
-              <path
-                d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm5.045 15.866a.686.686 0 0 1-.943.228c-2.583-1.579-5.834-1.935-9.663-1.06a.686.686 0 0 1-.306-1.337c4.19-.958 7.785-.546 10.684 1.226a.686.686 0 0 1 .228.943zm1.346-2.995a.858.858 0 0 1-1.18.282c-2.956-1.817-7.464-2.344-10.961-1.282a.856.856 0 0 1-1.11-.904.858.858 0 0 1 .611-.737c3.996-1.212 8.962-.625 12.357 1.462a.857.857 0 0 1 .283 1.179zm.116-3.119c-3.546-2.106-9.395-2.3-12.78-1.272a1.029 1.029 0 0 1-.597-1.969c3.886-1.18 10.345-.952 14.427 1.471a1.029 1.029 0 0 1-1.05 1.77z">
-              </path>
-            </svg>
-            <a href="" class="text-secondary link-underline link-underline-opacity-0">Get App</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <footer id="player" class="d-none d-lg-block">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="d-flex gap-1 mx-3 my-3 album align-items-center">
-            <div class="library-img">
-              <img src="./assets/imgs/main/image-1.jpg" alt="album" class="rounded-3" />
+    </main>
+    <footer id="mobile-nav" class="d-lg-none py-3">
+      <div id="mobile-player" class="py-2 mx-3 rounded-3 mb-3 position-relative">
+        <div class="container-fluid">
+          <div class="d-flex gap-1 align-items-center">
+            <div class="">
+              <div class="library-img">
+                <img src="./assets/imgs/main/image-1.jpg" alt="album" class="rounded-3" />
+              </div>
             </div>
-            <div class="d-flex align-items-center">
+            <div class="">
               <div class="d-flex flex-column">
                 <a class="link-underline link-underline-opacity-0 mb-1 text-light">Nome Brano</a>
                 <a class="link-underline link-underline-opacity-0 mb-0 text-secondary">Nome Artista</a>
               </div>
             </div>
-            <div class="d-flex justify-content-end align-items-center ms-auto">
-              <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                class="Svg-sc-ytk21e-0 dYnaPI" width="17" height="17" fill="#A7A7A7">
-                <path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"></path>
+            <div class="d-flex gap-4 ms-auto me-1">
+              <svg
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                class="Svg-sc-ytk21e-0 bneLcE"
+              >
                 <path
-                  d="M11.75 8a.75.75 0 0 1-.75.75H8.75V11a.75.75 0 0 1-1.5 0V8.75H5a.75.75 0 0 1 0-1.5h2.25V5a.75.75 0 0 1 1.5 0v2.25H11a.75.75 0 0 1 .75.75z">
-                </path>
+                  d="M5.21 1.57a6.757 6.757 0 0 1 6.708 1.545.124.124 0 0 0 .165 0 6.741 6.741 0 0 1 5.715-1.78l.004.001a6.802 6.802 0 0 1 5.571 5.376v.003a6.689 6.689 0 0 1-1.49 5.655l-7.954 9.48a2.518 2.518 0 0 1-3.857 0L2.12 12.37A6.683 6.683 0 0 1 .627 6.714 6.757 6.757 0 0 1 5.21 1.57zm3.12 1.803a4.757 4.757 0 0 0-5.74 3.725l-.001.002a4.684 4.684 0 0 0 1.049 3.969l.009.01 7.958 9.485a.518.518 0 0 0 .79 0l7.968-9.495a4.688 4.688 0 0 0 1.049-3.965 4.803 4.803 0 0 0-3.931-3.794 4.74 4.74 0 0 0-4.023 1.256l-.008.008a2.123 2.123 0 0 1-2.9 0l-.007-.007a4.757 4.757 0 0 0-2.214-1.194z"
+                ></path>
+              </svg>
+              <svg
+                class="active"
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                viewBox="0 0 16 16"
+                class="Svg-sc-ytk21e-0 dYnaPI"
+              >
+                <path
+                  d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
+                ></path>
               </svg>
             </div>
-          </div>
-        </div>
-        <div class="col-md-6 rounded-3 p-3 rounded-3 p-1">
-          <div class="d-flex flex-column justify-content-center align-items-center mt-3">
-            <div class="d-flex gap-3 justify-content-center">
-              <button id="shuffle" class="btn btn-link link-underline link-underline-opacity-0">
-                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 dYnaPI" width="15" height="15" fill="#A7A7A7">
-                  <path
-                    d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z">
-                  </path>
-                  <path
-                    d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z">
-                  </path>
-                </svg>
-              </button>
-              <button id="backwards" class="btn link-underline link-underline-opacity-0">
-                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 dYnaPI" width="15" height="15" fill="#A7A7A7">
-                  <path
-                    d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z">
-                  </path>
-                </svg>
-              </button>
-              <button id="play" class="border border-0 btn-link link-underline link-underline-opacity-0 rounded-circle">
-                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 dYnaPI" width="20" height="20" fill="black">
-                  <path
-                    d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z">
-                  </path>
-                </svg>
-              </button>
-              <button id="forward" class="btn btn-link link-underline link-underline-opacity-0">
-                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 dYnaPI" width="15" height="15" fill="#A7A7A7">
-                  <path
-                    d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z">
-                  </path>
-                </svg>
-              </button>
-              <button id="repeat" class="btn btn-link link-underline link-underline-opacity-0">
-                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 dYnaPI" width="15" height="15" fill="#A7A7A7">
-                  <path
-                    d="M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5z">
-                  </path>
-                </svg>
-              </button>
-            </div>
-            <div class="d-flex justify-content-center align-items-center gap-2">
-              <span id="current-time" class="text-secondary">0:00</span>
-              <div class="progress song-progress-bar" role="progressbar" aria-label="Basic example" aria-valuenow="50"
-                aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar bg-success" style="width: 50%"></div>
-              </div>
-              <span id="total-time" class="text-secondary">6:30</span>
+
+            <div
+              class="progress song-progress-bar position-absolute bottom-0"
+              role="progressbar"
+              aria-label="Basic example"
+              aria-valuenow="50"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="progress-bar bg-success" style="width: 50%"></div>
             </div>
           </div>
         </div>
-        <div class="col-lg-3">
-          <div class="me-3 mt-5">
-            <div class="d-flex justify-content-end align-items-center gap-3">
-              <div>
-                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 dYnaPI" width="17" height="17" fill="#A7A7A7">
-                  <path d="M11.196 8 6 5v6l5.196-3z"></path>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <svg
+                class="active"
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                class="Svg-sc-ytk21e-0 bneLcE home-active-icon QbaKKdcHNA2x3_YJvpYu"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
+                ></path>
+              </svg>
+              <a href="" class="text-light link-underline link-underline-opacity-0">Home</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <svg
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                class="Svg-sc-ytk21e-0 bneLcE search-icon QbaKKdcHNA2x3_YJvpYu"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                ></path>
+              </svg>
+              <a href="./search.html" class="text-secondary link-underline link-underline-opacity-0">Search</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <svg
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                class="Svg-sc-ytk21e-0 bneLcE"
+              >
+                <path
+                  d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                ></path>
+              </svg>
+              <a href="" class="text-secondary link-underline link-underline-opacity-0">Library</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <svg
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                class="Svg-sc-ytk21e-0 bneLcE"
+              >
+                <path
+                  d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm5.045 15.866a.686.686 0 0 1-.943.228c-2.583-1.579-5.834-1.935-9.663-1.06a.686.686 0 0 1-.306-1.337c4.19-.958 7.785-.546 10.684 1.226a.686.686 0 0 1 .228.943zm1.346-2.995a.858.858 0 0 1-1.18.282c-2.956-1.817-7.464-2.344-10.961-1.282a.856.856 0 0 1-1.11-.904.858.858 0 0 1 .611-.737c3.996-1.212 8.962-.625 12.357 1.462a.857.857 0 0 1 .283 1.179zm.116-3.119c-3.546-2.106-9.395-2.3-12.78-1.272a1.029 1.029 0 0 1-.597-1.969c3.886-1.18 10.345-.952 14.427 1.471a1.029 1.029 0 0 1-1.05 1.77z"
+                ></path>
+              </svg>
+              <a href="" class="text-secondary link-underline link-underline-opacity-0">Get App</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer id="player" class="d-none d-lg-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="d-flex gap-1 mx-3 my-3 album align-items-center">
+              <div class="library-img">
+                <img src="./assets/imgs/main/image-1.jpg" alt="album" class="rounded-3" />
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="d-flex flex-column">
+                  <a class="link-underline link-underline-opacity-0 mb-1 text-light">Nome Brano</a>
+                  <a class="link-underline link-underline-opacity-0 mb-0 text-secondary">Nome Artista</a>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end align-items-center ms-auto">
+                <svg
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  class="Svg-sc-ytk21e-0 dYnaPI"
+                  width="17"
+                  height="17"
+                  fill="#A7A7A7"
+                >
+                  <path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"></path>
                   <path
-                    d="M15.002 1.75A1.75 1.75 0 0 0 13.252 0h-10.5a1.75 1.75 0 0 0-1.75 1.75v12.5c0 .966.783 1.75 1.75 1.75h10.5a1.75 1.75 0 0 0 1.75-1.75V1.75zm-1.75-.25a.25.25 0 0 1 .25.25v12.5a.25.25 0 0 1-.25.25h-10.5a.25.25 0 0 1-.25-.25V1.75a.25.25 0 0 1 .25-.25h10.5z">
-                  </path>
+                    d="M11.75 8a.75.75 0 0 1-.75.75H8.75V11a.75.75 0 0 1-1.5 0V8.75H5a.75.75 0 0 1 0-1.5h2.25V5a.75.75 0 0 1 1.5 0v2.25H11a.75.75 0 0 1 .75.75z"
+                  ></path>
                 </svg>
               </div>
-              <div>
-                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 dYnaPI" width="17" height="17" fill="#A7A7A7">
-                  <path
-                    d="M15 15H1v-1.5h14V15zm0-4.5H1V9h14v1.5zm-14-7A2.5 2.5 0 0 1 3.5 1h9a2.5 2.5 0 0 1 0 5h-9A2.5 2.5 0 0 1 1 3.5zm2.5-1a1 1 0 0 0 0 2h9a1 1 0 1 0 0-2h-9z">
-                  </path>
-                </svg>
+            </div>
+          </div>
+          <div class="col-md-6 rounded-3 p-3 rounded-3 p-1">
+            <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+              <div class="d-flex gap-3 justify-content-center">
+                <button id="shuffle" class="btn btn-link link-underline link-underline-opacity-0">
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 dYnaPI"
+                    width="15"
+                    height="15"
+                    fill="#A7A7A7"
+                  >
+                    <path
+                      d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"
+                    ></path>
+                    <path
+                      d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"
+                    ></path>
+                  </svg>
+                </button>
+                <button id="backwards" class="btn link-underline link-underline-opacity-0">
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 dYnaPI"
+                    width="15"
+                    height="15"
+                    fill="#A7A7A7"
+                  >
+                    <path
+                      d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z"
+                    ></path>
+                  </svg>
+                </button>
+                <button
+                  id="play"
+                  class="border border-0 btn-link link-underline link-underline-opacity-0 rounded-circle"
+                >
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 dYnaPI"
+                    width="20"
+                    height="20"
+                    fill="black"
+                  >
+                    <path
+                      d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
+                    ></path>
+                  </svg>
+                </button>
+                <button id="forward" class="btn btn-link link-underline link-underline-opacity-0">
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 dYnaPI"
+                    width="15"
+                    height="15"
+                    fill="#A7A7A7"
+                  >
+                    <path
+                      d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z"
+                    ></path>
+                  </svg>
+                </button>
+                <button id="repeat" class="btn btn-link link-underline link-underline-opacity-0">
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 dYnaPI"
+                    width="15"
+                    height="15"
+                    fill="#A7A7A7"
+                  >
+                    <path
+                      d="M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5z"
+                    ></path>
+                  </svg>
+                </button>
               </div>
-              <div>
-                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 dYnaPI" width="17" height="17" fill="#A7A7A7">
-                  <path
-                    d="M6 2.75C6 1.784 6.784 1 7.75 1h6.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15h-6.5A1.75 1.75 0 0 1 6 13.25V2.75zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h6.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25h-6.5zm-6 0a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25H4V11H1.75A1.75 1.75 0 0 1 0 9.25v-6.5C0 1.784.784 1 1.75 1H4v1.5H1.75zM4 15H2v-1.5h2V15z">
-                  </path>
-                  <path d="M13 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-1-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-                </svg>
+              <div class="d-flex justify-content-center align-items-center gap-2">
+                <span id="current-time" class="text-secondary">0:00</span>
+                <div
+                  class="progress song-progress-bar"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="50"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar bg-success" style="width: 50%"></div>
+                </div>
+                <span id="total-time" class="text-secondary">6:30</span>
               </div>
-              <div>
-                <svg data-encore-id="icon" role="presentation" aria-label="Volume high" aria-hidden="true"
-                  id="volume-icon" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 kcUFwU" width="17" height="17"
-                  fill="#A7A7A7">
-                  <path
-                    d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z">
-                  </path>
-                  <path d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"></path>
-                </svg>
-              </div>
-              <div id="volume-progress-bar" class="progress" role="progressbar" aria-label="Basic example"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar bg-success" style="width: 100%"></div>
-              </div>
-              <div>
-                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 dYnaPI" width="17" height="17" fill="#A7A7A7">
-                  <path
-                    d="M16 2.45c0-.8-.65-1.45-1.45-1.45H1.45C.65 1 0 1.65 0 2.45v11.1C0 14.35.65 15 1.45 15h5.557v-1.5H1.5v-11h13V7H16V2.45z">
-                  </path>
-                  <path
-                    d="M15.25 9.007a.75.75 0 0 1 .75.75v4.493a.75.75 0 0 1-.75.75H9.325a.75.75 0 0 1-.75-.75V9.757a.75.75 0 0 1 .75-.75h5.925z">
-                  </path>
-                </svg>
-              </div>
-              <div>
-                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 dYnaPI" width="17" height="17" fill="#A7A7A7">
-                  <path
-                    d="M6.53 9.47a.75.75 0 0 1 0 1.06l-2.72 2.72h1.018a.75.75 0 0 1 0 1.5H1.25v-3.579a.75.75 0 0 1 1.5 0v1.018l2.72-2.72a.75.75 0 0 1 1.06 0zm2.94-2.94a.75.75 0 0 1 0-1.06l2.72-2.72h-1.018a.75.75 0 1 1 0-1.5h3.578v3.579a.75.75 0 0 1-1.5 0V3.81l-2.72 2.72a.75.75 0 0 1-1.06 0z">
-                  </path>
-                </svg>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="me-3 mt-5">
+              <div class="d-flex justify-content-end align-items-center gap-3">
+                <div>
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 dYnaPI"
+                    width="17"
+                    height="17"
+                    fill="#A7A7A7"
+                  >
+                    <path d="M11.196 8 6 5v6l5.196-3z"></path>
+                    <path
+                      d="M15.002 1.75A1.75 1.75 0 0 0 13.252 0h-10.5a1.75 1.75 0 0 0-1.75 1.75v12.5c0 .966.783 1.75 1.75 1.75h10.5a1.75 1.75 0 0 0 1.75-1.75V1.75zm-1.75-.25a.25.25 0 0 1 .25.25v12.5a.25.25 0 0 1-.25.25h-10.5a.25.25 0 0 1-.25-.25V1.75a.25.25 0 0 1 .25-.25h10.5z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 dYnaPI"
+                    width="17"
+                    height="17"
+                    fill="#A7A7A7"
+                  >
+                    <path
+                      d="M15 15H1v-1.5h14V15zm0-4.5H1V9h14v1.5zm-14-7A2.5 2.5 0 0 1 3.5 1h9a2.5 2.5 0 0 1 0 5h-9A2.5 2.5 0 0 1 1 3.5zm2.5-1a1 1 0 0 0 0 2h9a1 1 0 1 0 0-2h-9z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 dYnaPI"
+                    width="17"
+                    height="17"
+                    fill="#A7A7A7"
+                  >
+                    <path
+                      d="M6 2.75C6 1.784 6.784 1 7.75 1h6.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15h-6.5A1.75 1.75 0 0 1 6 13.25V2.75zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h6.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25h-6.5zm-6 0a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25H4V11H1.75A1.75 1.75 0 0 1 0 9.25v-6.5C0 1.784.784 1 1.75 1H4v1.5H1.75zM4 15H2v-1.5h2V15z"
+                    ></path>
+                    <path d="M13 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-1-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <svg
+                    data-encore-id="icon"
+                    role="presentation"
+                    aria-label="Volume high"
+                    aria-hidden="true"
+                    id="volume-icon"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 kcUFwU"
+                    width="17"
+                    height="17"
+                    fill="#A7A7A7"
+                  >
+                    <path
+                      d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z"
+                    ></path>
+                    <path d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"></path>
+                  </svg>
+                </div>
+                <div
+                  id="volume-progress-bar"
+                  class="progress"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar bg-success" style="width: 100%"></div>
+                </div>
+                <div>
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 dYnaPI"
+                    width="17"
+                    height="17"
+                    fill="#A7A7A7"
+                  >
+                    <path
+                      d="M16 2.45c0-.8-.65-1.45-1.45-1.45H1.45C.65 1 0 1.65 0 2.45v11.1C0 14.35.65 15 1.45 15h5.557v-1.5H1.5v-11h13V7H16V2.45z"
+                    ></path>
+                    <path
+                      d="M15.25 9.007a.75.75 0 0 1 .75.75v4.493a.75.75 0 0 1-.75.75H9.325a.75.75 0 0 1-.75-.75V9.757a.75.75 0 0 1 .75-.75h5.925z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 dYnaPI"
+                    width="17"
+                    height="17"
+                    fill="#A7A7A7"
+                  >
+                    <path
+                      d="M6.53 9.47a.75.75 0 0 1 0 1.06l-2.72 2.72h1.018a.75.75 0 0 1 0 1.5H1.25v-3.579a.75.75 0 0 1 1.5 0v1.018l2.72-2.72a.75.75 0 0 1 1.06 0zm2.94-2.94a.75.75 0 0 1 0-1.06l2.72-2.72h-1.018a.75.75 0 1 1 0-1.5h3.578v3.579a.75.75 0 0 1-1.5 0V3.81l-2.72 2.72a.75.75 0 0 1-1.06 0z"
+                    ></path>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script type="module" src="./assets/script/library.js"></script>
-  <script type="module" src="./assets/script/artist.js"></script>
-</body>
-
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./assets/script/library.js"></script>
+    <script type="module" src="./assets/script/artist.js"></script>
+  </body>
 </html>

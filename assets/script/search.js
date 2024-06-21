@@ -31,7 +31,7 @@ const search = async e => {
   row.id = "searchResults";
 
   const relevant = document.createElement("div");
-  relevant.className = "col-6 mt-4";
+  relevant.className = "col-12 col-md-6 mt-4";
 
   const h2 = document.createElement("h2");
   h2.className = "fs-5 fw-bold";
@@ -71,7 +71,7 @@ const search = async e => {
   esplora.append(row);
 
   const songSection = document.createElement("div");
-  songSection.className = "col-6 mt-4";
+  songSection.className = "col-12 col-md-6 mt-4";
 
   const songSectionTitle = document.createElement("h2");
   songSectionTitle.className = "fs-5 fw-bold px-3";
