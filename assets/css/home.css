@@ -2,7 +2,6 @@
 /* Override variabili */
 /* Cambiato il bianco primario con bianco puro */
 /* Override map */
-/* aggiunto nuovi font-size (fs-7,fs-8 ecc..) */
 :root,
 [data-bs-theme=light] {
   --bs-blue: #121212;
@@ -8393,22 +8392,6 @@ textarea.form-control-lg {
 
 .fs-6 {
   font-size: 1rem !important;
-}
-
-.fs-7 {
-  font-size: 0.9rem !important;
-}
-
-.fs-8 {
-  font-size: 0.8rem !important;
-}
-
-.fs-9 {
-  font-size: 0.7rem !important;
-}
-
-.fs-10 {
-  font-size: 0.6rem !important;
 }
 
 .fst-italic {
