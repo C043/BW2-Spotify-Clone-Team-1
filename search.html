@@ -5,63 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Spotify - Web Player: Music for everyone</title>
     <link rel="stylesheet" href="./assets/dist/css/search.min.css" />
-    <link rel="stylesheet" href="./scss/search.scss" />
-    <style></style>
   </head>
   <body data-bs-theme="dark">
     <main>
       <div class="container-fluid">
-        <div class="row">
-          <aside class="col-md-3">
+        <div class="row g-2">
+          <aside class="d-none d-lg-block col-lg-4 col-xl-3">
             <div class="d-flex flex-column rounded-3 bg-primary mt-2">
-              <div class="d-flex gap-2 pt-3 ms-3">
-                <svg
-                  data-encore-id="icon"
-                  role="img"
-                  aria-hidden="true"
-                  class="Svg-sc-ytk21e-0 bneLcE home-active-icon QbaKKdcHNA2x3_YJvpYu"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  fill="white"
-                >
-                  <path
-                    d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
-                  ></path>
-                </svg>
+              <div id="index" class="d-flex gap-2 pt-3 ms-3 active">
                 <a
-                  href=""
-                  class="text-light pb-3 link-underline link-underline-opacity-0 active"
+                  href="./index.html"
+                  class="d-flex justify-content-center gap-2 text-light pb-3 link-underline link-underline-opacity-0 active"
                   aria-current="true"
-                  >Home</a
+                >
+                  <svg
+                    class="active"
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    class="Svg-sc-ytk21e-0 bneLcE home-active-icon QbaKKdcHNA2x3_YJvpYu"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path
+                      d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
+                    ></path>
+                  </svg>
+                  Home</a
                 >
               </div>
-              <div class="d-flex gap-2 ms-3">
-                <svg
-                  data-encore-id="icon"
-                  role="img"
-                  aria-hidden="true"
-                  class="Svg-sc-ytk21e-0 bneLcE search-icon QbaKKdcHNA2x3_YJvpYu"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  fill="#A7A7A7"
-                >
-                  <path
-                    d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
-                  ></path>
-                </svg>
+              <div id="search" class="d-flex gap-2 ms-3">
                 <a
-                  href=""
-                  class="text-secondary pb-3 link-underline link-underline-opacity-0"
-                  >Search</a
+                  href="./search.html"
+                  class="d-flex gap-2 text-secondary pb-3 link-underline link-underline-opacity-0"
+                >
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    class="Svg-sc-ytk21e-0 bneLcE search-icon QbaKKdcHNA2x3_YJvpYu"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="#A7A7A7"
+                  >
+                    <path
+                      d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                    ></path>
+                  </svg>
+                  Search</a
                 >
               </div>
             </div>
-            <div
-              id="library-block"
-              class="d-flex flex-column rounded-3 bg-primary mt-2"
-            >
+            <div id="library-block" class="d-flex flex-column rounded-3 bg-primary mt-2">
               <div class="d-flex gap-2 pt-3 ms-3 align-items-center mb-3">
                 <svg
                   data-encore-id="icon"
@@ -77,11 +74,7 @@
                     d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
                   ></path>
                 </svg>
-                <a
-                  href=""
-                  class="text-light link-underline link-underline-opacity-0"
-                  >Your Library</a
-                >
+                <a href="" class="text-light link-underline link-underline-opacity-0">Your Library</a>
                 <path
                   d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z"
                 ></path
@@ -115,17 +108,11 @@
                 </svg>
               </div>
               <div class="mx-2 mb-2">
-                <button class="btn btn-info rounded-pill px-2 py-1">
-                  Playlists
-                </button>
-                <button class="btn btn-info rounded-pill px-2 py-1">
-                  Artists
-                </button>
-                <button class="btn btn-info rounded-pill px-2 py-1">
-                  Albums
-                </button>
+                <button class="btn btn-info rounded-pill px-2 py-1">Playlists</button>
+                <button class="btn btn-info rounded-pill px-2 py-1">Artists</button>
+                <button class="btn btn-info rounded-pill px-2 py-1">Albums</button>
               </div>
-              <div id="library-list" class="">
+              <div id="library-list" class="scrollable">
                 <div class="d-flex mx-3 gap-1 align-items-center pb-3">
                   <svg
                     data-encore-id="icon"
@@ -157,220 +144,10 @@
                     ></path>
                   </svg>
                 </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
-                <div
-                  class="library-list-item d-flex gap-3 mx-1 album align-items-center p-2 rounded-3"
-                >
-                  <div class="library-img">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      alt="album"
-                      class="rounded-3"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="mb-1">Nome Album</p>
-                    <p class="mb-0 text-secondary">Album • Nome Artista</p>
-                  </div>
-                </div>
               </div>
             </div>
           </aside>
-          <div class="col-md-6 bg-primary">
+          <div class="col-12 col-lg-8 col-xl-6 rounded-3 rounded-3">
             <header>
               <div>
                 <div class="d-flex justify-content-between pt-3">
@@ -450,9 +227,7 @@
                       </svg>
 
                       <div>
-                        <p class="ps-2 me-5 fw-semibold my-auto">
-                          Installa App
-                        </p>
+                        <p class="ps-2 me-5 fw-semibold my-auto">Installa App</p>
                       </div>
                     </div>
 
@@ -487,11 +262,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Music</h5>
-                        <img
-                          src="./assets/imgs/search/image-1.jpeg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-1.jpeg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -499,11 +270,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">New releases</h5>
-                        <img
-                          src="./assets/imgs/search/image-2.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-2.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -511,11 +278,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Mood</h5>
-                        <img
-                          src="./assets/imgs/search/image-3.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-3.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -523,11 +286,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Made for you</h5>
-                        <img
-                          src="./assets/imgs/search/image-4.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-4.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -535,25 +294,15 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Latin</h5>
-                        <img
-                          src="./assets/imgs/search/image-5.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-5.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
                   <div class="col-4 mt-4 card-item">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">
-                          Dance/ <br />Electronic
-                        </h5>
-                        <img
-                          src="./assets/imgs/search/image-6.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <h5 class="card-title fs-5 fw-bold">Dance/ <br />Electronic</h5>
+                        <img src="./assets/imgs/search/image-6.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -561,11 +310,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Rock</h5>
-                        <img
-                          src="./assets/imgs/search/image-7.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-7.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -573,11 +318,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Training</h5>
-                        <img
-                          src="./assets/imgs/search/image-8.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-8.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -585,11 +326,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
-                        <img
-                          src="./assets/imgs/search/image-9.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-9.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -597,11 +334,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Lo-fi Beats</h5>
-                        <img
-                          src="./assets/imgs/search/image-10.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-10.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -609,11 +342,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Discover</h5>
-                        <img
-                          src="./assets/imgs/search/image-11.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-11.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -621,11 +350,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Pop</h5>
-                        <img
-                          src="./assets/imgs/search/image-12.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-12.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -633,11 +358,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Summer Hits</h5>
-                        <img
-                          src="./assets/imgs/search/image-13.jpeg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-13.jpeg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -645,11 +366,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Charts</h5>
-                        <img
-                          src="./assets/imgs/search/image-14.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-14.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -660,11 +377,7 @@
                           Podcasts new <br />
                           Releases
                         </h5>
-                        <img
-                          src="./assets/imgs/search/image-15.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-15.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -672,11 +385,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Soul</h5>
-                        <img
-                          src="./assets/imgs/search/image-16.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-16.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -684,11 +393,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Instrumental</h5>
-                        <img
-                          src="./assets/imgs/search/image-17.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-17.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -696,11 +401,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Sleep</h5>
-                        <img
-                          src="./assets/imgs/search/image-18.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-18.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -708,11 +409,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Caraibi</h5>
-                        <img
-                          src="./assets/imgs/search/image-19.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-19.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -720,11 +417,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Jazz</h5>
-                        <img
-                          src="./assets/imgs/search/image-20.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-20.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -732,11 +425,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Spotify Single</h5>
-                        <img
-                          src="./assets/imgs/search/image-21.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-21.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -744,11 +433,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Indie</h5>
-                        <img
-                          src="./assets/imgs/search/image-22.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-22.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -756,11 +441,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Focus</h5>
-                        <img
-                          src="./assets/imgs/search/image-23.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-23.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -768,11 +449,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Guitar</h5>
-                        <img
-                          src="./assets/imgs/search/image-24.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-24.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -781,11 +458,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Daily</h5>
-                        <img
-                          src="./assets/imgs/search/image-26.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-26.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -793,11 +466,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Party Hits</h5>
-                        <img
-                          src="./assets/imgs/search/image-27.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-27.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -805,11 +474,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Afro</h5>
-                        <img
-                          src="./assets/imgs/search/image-28.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-28.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -817,11 +482,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Classic</h5>
-                        <img
-                          src="./assets/imgs/search/image-29.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-29.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -829,11 +490,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Gaming</h5>
-                        <img
-                          src="./assets/imgs/search/image-30.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-30.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -841,11 +498,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Metal</h5>
-                        <img
-                          src="./assets/imgs/search/image-31.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-31.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -853,11 +506,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Funk</h5>
-                        <img
-                          src="./assets/imgs/search/image-32.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-32.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -865,25 +514,15 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Punk</h5>
-                        <img
-                          src="./assets/imgs/search/image-33.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-33.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
                   <div class="col-4 mt-4 card-item">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">
-                          Ambient <br />Essential
-                        </h5>
-                        <img
-                          src="./assets/imgs/search/image-34.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <h5 class="card-title fs-5 fw-bold">Ambient <br />Essential</h5>
+                        <img src="./assets/imgs/search/image-34.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -891,11 +530,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">K-Pop</h5>
-                        <img
-                          src="./assets/imgs/search/image-35.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-35.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -903,11 +538,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Blues</h5>
-                        <img
-                          src="./assets/imgs/search/image-36.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-36.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -915,11 +546,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">New Podcasts</h5>
-                        <img
-                          src="./assets/imgs/search/image-37.jpeg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-37.jpeg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -927,11 +554,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Country</h5>
-                        <img
-                          src="./assets/imgs/search/image-39.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-39.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -939,11 +562,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Alternative</h5>
-                        <img
-                          src="./assets/imgs/search/image-40.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-40.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -951,11 +570,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Arab Pop</h5>
-                        <img
-                          src="./assets/imgs/search/image-41.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-41.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -963,11 +578,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Pop Mix</h5>
-                        <img
-                          src="./assets/imgs/search/image-42.png"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-42.png" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -975,11 +586,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Radar</h5>
-                        <img
-                          src="./assets/imgs/search/image-43.png"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-43.png" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -987,11 +594,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Pop 4 Kids</h5>
-                        <img
-                          src="./assets/imgs/search/image-44.png"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-44.png" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -999,11 +602,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Road Trip</h5>
-                        <img
-                          src="./assets/imgs/search/image-45.png"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-45.png" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -1011,11 +610,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Tastemaker</h5>
-                        <img
-                          src="./assets/imgs/search/image-46.jpeg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-46.jpeg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -1023,11 +618,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Today Hits</h5>
-                        <img
-                          src="./assets/imgs/search/image-47.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-47.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -1035,11 +626,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Podcasts</h5>
-                        <img
-                          src="./assets/imgs/search/image-48.jpeg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-48.jpeg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -1047,25 +634,15 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Hip-Hop</h5>
-                        <img
-                          src="./assets/imgs/search/image-49.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-49.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
                   <div class="col-4 mt-4 card-item">
                     <div class="card musica-card rounded">
                       <div class="card-body">
-                        <h5 class="card-title fs-5 fw-bold">
-                          New Rock <br />Releases
-                        </h5>
-                        <img
-                          src="./assets/imgs/search/image-50.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <h5 class="card-title fs-5 fw-bold">New Rock <br />Releases</h5>
+                        <img src="./assets/imgs/search/image-50.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -1073,11 +650,7 @@
                     <div class="card musica-card rounded">
                       <div class="card-body">
                         <h5 class="card-title fs-5 fw-bold">Relax</h5>
-                        <img
-                          src="./assets/imgs/search/image-51.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-51.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
@@ -1088,21 +661,14 @@
                           Top Gaming <br />
                           Tracks
                         </h5>
-                        <img
-                          src="./assets/imgs/search/image-52.jpg"
-                          class="card-img"
-                          alt="Image"
-                        />
+                        <img src="./assets/imgs/search/image-52.jpg" class="card-img" alt="Image" />
                       </div>
                     </div>
                   </div>
                   <div class="row" id="emptyCards" style="display: none">
                     <div class="col-6 mt-4">
                       <h2 class="fs-5 fw-bold">Rilevante</h2>
-                      <div
-                        id="artistCard"
-                        class="card empty-card rounded py-4 px-3 border-0"
-                      >
+                      <div id="artistCard" class="card empty-card rounded py-4 px-3 border-0">
                         <div class="mb-3">
                           <img
                             class="rounded-circle object-fit-cover"
@@ -1189,64 +755,33 @@
 
                     <div class="mt-4">
                       <h2 class="fs-5 fw-bold">Con (nome Artista)</h2>
-                      <div
-                        class="row card empty-card rounded py-4 px-3 bg-primary border-0"
-                        style="display: ruby"
-                      >
+                      <div class="row card empty-card rounded py-4 px-3 bg-primary border-0" style="display: ruby">
                         <div class="col-3">
                           <div class="cardArtist">
-                            <img
-                              class="rounded"
-                              width="100%"
-                              src="./assets/imgs/search/image-1.jpeg"
-                              alt=""
-                            />
+                            <img class="rounded" width="100%" src="./assets/imgs/search/image-1.jpeg" alt="" />
                             <h1 class="fs-6 fw-semibold mb-0 mt-2">nome</h1>
-                            <h2 class="fs-7 text-secondary fw-semibold">
-                              altro
-                            </h2>
+                            <h2 class="fs-7 text-secondary fw-semibold">altro</h2>
                           </div>
                         </div>
                         <div class="col-3">
                           <div class="cardArtist">
-                            <img
-                              class="rounded"
-                              width="100%"
-                              src="./assets/imgs/search/image-1.jpeg"
-                              alt=""
-                            />
+                            <img class="rounded" width="100%" src="./assets/imgs/search/image-1.jpeg" alt="" />
                             <h1 class="fs-6 fw-semibold mb-0 mt-2">nome</h1>
-                            <h2 class="fs-7 text-secondary fw-semibold">
-                              altro
-                            </h2>
+                            <h2 class="fs-7 text-secondary fw-semibold">altro</h2>
                           </div>
                         </div>
                         <div class="col-3">
                           <div class="cardArtist">
-                            <img
-                              class="rounded"
-                              width="100%"
-                              src="./assets/imgs/search/image-1.jpeg"
-                              alt=""
-                            />
+                            <img class="rounded" width="100%" src="./assets/imgs/search/image-1.jpeg" alt="" />
                             <h1 class="fs-6 fw-semibold mb-0 mt-2">nome</h1>
-                            <h2 class="fs-7 text-secondary fw-semibold">
-                              altro
-                            </h2>
+                            <h2 class="fs-7 text-secondary fw-semibold">altro</h2>
                           </div>
                         </div>
                         <div class="col-3">
                           <div class="cardArtist">
-                            <img
-                              class="rounded"
-                              width="100%"
-                              src="./assets/imgs/search/image-1.jpeg"
-                              alt=""
-                            />
+                            <img class="rounded" width="100%" src="./assets/imgs/search/image-1.jpeg" alt="" />
                             <h1 class="fs-6 fw-semibold mb-0 mt-2">nome</h1>
-                            <h2 class="fs-7 text-secondary fw-semibold">
-                              altro
-                            </h2>
+                            <h2 class="fs-7 text-secondary fw-semibold">altro</h2>
                           </div>
                         </div>
                       </div>
@@ -1258,101 +793,37 @@
                     <div class="col-md-6 col-lg-4 col-xl-2">
                       <h6>Company</h6>
                       <div class="d-flex flex-column">
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >About</a
-                        >
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >Jobs</a
-                        >
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >For the Record</a
-                        >
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">About</a>
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">Jobs</a>
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">For the Record</a>
                       </div>
                     </div>
                     <div class="col-md-6 col-lg-4 col-xl-2">
                       <h6>Communities</h6>
                       <div class="d-flex flex-column">
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >For Artists</a
-                        >
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >Developers</a
-                        >
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >Advertising</a
-                        >
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >Investors</a
-                        >
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >Vendors</a
-                        >
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">For Artists</a>
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">Developers</a>
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">Advertising</a>
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">Investors</a>
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">Vendors</a>
                       </div>
                     </div>
                     <div class="col-md-6 col-lg-4 col-xl-2">
                       <h6>Useful links</h6>
                       <div class="d-flex flex-column">
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >Support</a
-                        >
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >Free Mobile App</a
-                        >
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >Consumer rights</a
-                        >
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">Support</a>
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">Free Mobile App</a>
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">Consumer rights</a>
                       </div>
                     </div>
                     <div class="col-md-6 col-lg-4 col-xl-2">
                       <h6>Spotify Plans</h6>
                       <div class="d-flex flex-column">
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >Premium Individual</a
-                        >
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >Premium Duo</a
-                        >
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >Premium Family</a
-                        >
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >Premium Student</a
-                        >
-                        <a
-                          href=""
-                          class="text-secondary link-underline link-underline-opacity-0"
-                          >Spotify Free</a
-                        >
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">Premium Individual</a>
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">Premium Duo</a>
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">Premium Family</a>
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">Premium Student</a>
+                        <a href="" class="text-secondary link-underline link-underline-opacity-0">Spotify Free</a>
                       </div>
                     </div>
                     <div class="col-md-6 col-lg-4 col-xl-4 ms-xl-auto">
@@ -1405,36 +876,14 @@
                   <div class="row mb-5 container">
                     <hr />
                     <div class="col-9 d-flex gap-3 flex-wrap">
-                      <a
-                        href=""
-                        class="text-secondary link-underline link-underline-opacity-0"
-                        >Legal</a
-                      >
-                      <a
-                        href=""
-                        class="text-secondary link-underline link-underline-opacity-0"
+                      <a href="" class="text-secondary link-underline link-underline-opacity-0">Legal</a>
+                      <a href="" class="text-secondary link-underline link-underline-opacity-0"
                         >Safety & Privacy Center</a
                       >
-                      <a
-                        href=""
-                        class="text-secondary link-underline link-underline-opacity-0"
-                        >Privacy Policy</a
-                      >
-                      <a
-                        href=""
-                        class="text-secondary link-underline link-underline-opacity-0"
-                        >Cookie Settings</a
-                      >
-                      <a
-                        href=""
-                        class="text-secondary link-underline link-underline-opacity-0"
-                        >About Ads</a
-                      >
-                      <a
-                        href=""
-                        class="text-secondary link-underline link-underline-opacity-0"
-                        >Accessibility</a
-                      >
+                      <a href="" class="text-secondary link-underline link-underline-opacity-0">Privacy Policy</a>
+                      <a href="" class="text-secondary link-underline link-underline-opacity-0">Cookie Settings</a>
+                      <a href="" class="text-secondary link-underline link-underline-opacity-0">About Ads</a>
+                      <a href="" class="text-secondary link-underline link-underline-opacity-0">Accessibility</a>
                     </div>
                     <div class="col-3 d-flex justify-content-end">
                       <p class="text-secondary">&copy 2024 Spotify AB</p>
@@ -1444,8 +893,8 @@
               </div>
             </main>
           </div>
-          <aside class="col-md-3">
-            <div class="d-flex flex-column rounded-3 bg-primary mt-2">
+          <aside class="d-none d-xl-block col-lg-3">
+            <div id="song-info-block" class="d-flex flex-column rounded-3 bg-primary mt-2">
               <div class="d-flex gap-4 pt-3 ms-3 align-items-center mb-3">
                 <h3 class="h6 mb-0">Nome Canzone</h3>
                 <svg
@@ -1462,21 +911,11 @@
                     d="M3 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm6.5 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM16 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
                   ></path>
                 </svg>
-                <button
-                  type="button"
-                  class="btn-close me-3"
-                  aria-label="Close"
-                ></button>
+                <button type="button" class="btn-close me-3" aria-label="Close"></button>
               </div>
-              <div>
-                <div
-                  class="song-card d-flex flex-column justify-content-center p-3 gap-2"
-                >
-                  <img
-                    src="./assets/imgs/main/image-1.jpg"
-                    alt=""
-                    class="rounded-3"
-                  />
+              <div class="scrollable">
+                <div class="song-card d-flex flex-column justify-content-center p-3 gap-2">
+                  <img src="./assets/imgs/main/image-1.jpg" alt="" class="rounded-3" />
                   <div class="d-flex align-items-center">
                     <div id="song-card-info">
                       <h2>Titolo Canzone</h2>
@@ -1505,29 +944,15 @@
                 </div>
                 <div class="d-flex justify-content-center p-3">
                   <div class="card border-0">
-                    <img
-                      src="./assets/imgs/main/image-1.jpg"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <p class="position-absolute top-0 mt-3 ms-3">
-                      About the artist
-                    </p>
+                    <img src="./assets/imgs/main/image-1.jpg" class="card-img-top" alt="..." />
+                    <p class="position-absolute top-0 mt-3 ms-3">About the artist</p>
                     <div class="card-body bg-info rounded-3">
-                      <h5 class="card-title fs-5 fw-bolder">Artista</h5>
+                      <h5 class="card-title">Artista</h5>
                       <div class="d-flex align-items-center">
-                        <p class="text-secondary mb-0">
-                          111,963 monthly listeners
-                        </p>
-                        <button
-                          class="btn btn-outline-light rounded-pill px-2 py-1 ms-auto"
-                        >
-                          Follow
-                        </button>
+                        <p class="text-secondary mb-0">111,963 monthly listeners</p>
+                        <button class="btn btn-outline-light rounded-pill px-2 py-1 ms-auto">Follow</button>
                       </div>
-                      <p class="card-text text-secondary mt-3">
-                        Descrizione artista
-                      </p>
+                      <p class="card-text text-secondary mt-3">Descrizione artista</p>
                     </div>
                   </div>
                 </div>
@@ -1537,60 +962,167 @@
         </div>
       </div>
     </main>
-    <footer id="player">
+    <footer id="mobile-nav" class="d-lg-none py-3">
+      <div id="mobile-player" class="py-2 mx-3 rounded-3 mb-3 position-relative">
+        <div class="container-fluid">
+          <div class="d-flex gap-1 align-items-center">
+            <div class="">
+              <div class="library-img">
+                <img src="./assets/imgs/main/image-1.jpg" alt="album" class="rounded-3" />
+              </div>
+            </div>
+            <div class="">
+              <div class="d-flex flex-column">
+                <a class="link-underline link-underline-opacity-0 mb-1 text-light">Nome Brano</a>
+                <a class="link-underline link-underline-opacity-0 mb-0 text-secondary">Nome Artista</a>
+              </div>
+            </div>
+            <div class="d-flex gap-4 ms-auto me-1">
+              <svg
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                class="Svg-sc-ytk21e-0 bneLcE"
+              >
+                <path
+                  d="M5.21 1.57a6.757 6.757 0 0 1 6.708 1.545.124.124 0 0 0 .165 0 6.741 6.741 0 0 1 5.715-1.78l.004.001a6.802 6.802 0 0 1 5.571 5.376v.003a6.689 6.689 0 0 1-1.49 5.655l-7.954 9.48a2.518 2.518 0 0 1-3.857 0L2.12 12.37A6.683 6.683 0 0 1 .627 6.714 6.757 6.757 0 0 1 5.21 1.57zm3.12 1.803a4.757 4.757 0 0 0-5.74 3.725l-.001.002a4.684 4.684 0 0 0 1.049 3.969l.009.01 7.958 9.485a.518.518 0 0 0 .79 0l7.968-9.495a4.688 4.688 0 0 0 1.049-3.965 4.803 4.803 0 0 0-3.931-3.794 4.74 4.74 0 0 0-4.023 1.256l-.008.008a2.123 2.123 0 0 1-2.9 0l-.007-.007a4.757 4.757 0 0 0-2.214-1.194z"
+                ></path>
+              </svg>
+              <svg
+                class="active"
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                viewBox="0 0 16 16"
+                class="Svg-sc-ytk21e-0 dYnaPI"
+              >
+                <path
+                  d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
+                ></path>
+              </svg>
+            </div>
+
+            <div
+              class="progress song-progress-bar position-absolute bottom-0"
+              role="progressbar"
+              aria-label="Basic example"
+              aria-valuenow="50"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="progress-bar bg-success" style="width: 50%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <svg
+                class="active"
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                class="Svg-sc-ytk21e-0 bneLcE home-active-icon QbaKKdcHNA2x3_YJvpYu"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
+                ></path>
+              </svg>
+              <a href="" class="text-light link-underline link-underline-opacity-0">Home</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <svg
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                class="Svg-sc-ytk21e-0 bneLcE search-icon QbaKKdcHNA2x3_YJvpYu"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                ></path>
+              </svg>
+              <a href="./search.html" class="text-secondary link-underline link-underline-opacity-0">Search</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <svg
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                class="Svg-sc-ytk21e-0 bneLcE"
+              >
+                <path
+                  d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                ></path>
+              </svg>
+              <a href="" class="text-secondary link-underline link-underline-opacity-0">Library</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <svg
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                class="Svg-sc-ytk21e-0 bneLcE"
+              >
+                <path
+                  d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm5.045 15.866a.686.686 0 0 1-.943.228c-2.583-1.579-5.834-1.935-9.663-1.06a.686.686 0 0 1-.306-1.337c4.19-.958 7.785-.546 10.684 1.226a.686.686 0 0 1 .228.943zm1.346-2.995a.858.858 0 0 1-1.18.282c-2.956-1.817-7.464-2.344-10.961-1.282a.856.856 0 0 1-1.11-.904.858.858 0 0 1 .611-.737c3.996-1.212 8.962-.625 12.357 1.462a.857.857 0 0 1 .283 1.179zm.116-3.119c-3.546-2.106-9.395-2.3-12.78-1.272a1.029 1.029 0 0 1-.597-1.969c3.886-1.18 10.345-.952 14.427 1.471a1.029 1.029 0 0 1-1.05 1.77z"
+                ></path>
+              </svg>
+              <a href="" class="text-secondary link-underline link-underline-opacity-0">Get App</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer id="player" class="d-none d-lg-block">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
-            <div class="d-flex gap-3 mx-3 my-3 album align-items-center">
+            <div class="d-flex gap-1 mx-3 my-3 album align-items-center">
               <div class="library-img">
-                <img
-                  src="./assets/imgs/main/image-1.jpg"
-                  alt="album"
-                  class="rounded-3"
-                />
+                <img src="./assets/imgs/main/image-1.jpg" alt="album" class="rounded-3" />
               </div>
-              <div class="d-flex align-items-center gap-4">
+              <div class="d-flex align-items-center">
                 <div class="d-flex flex-column">
-                  <a
-                    class="link-underline link-underline-opacity-0 mb-1 text-light"
-                    >Nome Brano</a
-                  >
-                  <a
-                    class="link-underline link-underline-opacity-0 mb-0 text-secondary"
-                    >Nome Artista</a
-                  >
+                  <a class="link-underline link-underline-opacity-0 mb-1 text-light">Nome Brano</a>
+                  <a class="link-underline link-underline-opacity-0 mb-0 text-secondary">Nome Artista</a>
                 </div>
-                <div>
-                  <svg
-                    data-encore-id="icon"
-                    role="img"
-                    aria-hidden="true"
-                    viewBox="0 0 16 16"
-                    class="Svg-sc-ytk21e-0 dYnaPI"
-                    width="17"
-                    height="17"
-                    fill="#A7A7A7"
-                  >
-                    <path
-                      d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
-                    ></path>
-                    <path
-                      d="M11.75 8a.75.75 0 0 1-.75.75H8.75V11a.75.75 0 0 1-1.5 0V8.75H5a.75.75 0 0 1 0-1.5h2.25V5a.75.75 0 0 1 1.5 0v2.25H11a.75.75 0 0 1 .75.75z"
-                    ></path>
-                  </svg>
-                </div>
+              </div>
+              <div class="d-flex justify-content-end align-items-center ms-auto">
+                <svg
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  class="Svg-sc-ytk21e-0 dYnaPI"
+                  width="17"
+                  height="17"
+                  fill="#A7A7A7"
+                >
+                  <path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"></path>
+                  <path
+                    d="M11.75 8a.75.75 0 0 1-.75.75H8.75V11a.75.75 0 0 1-1.5 0V8.75H5a.75.75 0 0 1 0-1.5h2.25V5a.75.75 0 0 1 1.5 0v2.25H11a.75.75 0 0 1 .75.75z"
+                  ></path>
+                </svg>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div
-              class="d-flex flex-column justify-content-center align-items-center mt-3"
-            >
+          <div class="col-md-6 rounded-3 p-3 rounded-3 p-1">
+            <div class="d-flex flex-column justify-content-center align-items-center mt-3">
               <div class="d-flex gap-3 justify-content-center">
-                <button
-                  id="shuffle"
-                  class="btn btn-link link-underline link-underline-opacity-0"
-                >
+                <button id="shuffle" class="btn btn-link link-underline link-underline-opacity-0">
                   <svg
                     data-encore-id="icon"
                     role="img"
@@ -1609,10 +1141,7 @@
                     ></path>
                   </svg>
                 </button>
-                <button
-                  id="backwards"
-                  class="btn link-underline link-underline-opacity-0"
-                >
+                <button id="backwards" class="btn link-underline link-underline-opacity-0">
                   <svg
                     data-encore-id="icon"
                     role="img"
@@ -1647,10 +1176,7 @@
                     ></path>
                   </svg>
                 </button>
-                <button
-                  id="forward"
-                  class="btn btn-link link-underline link-underline-opacity-0"
-                >
+                <button id="forward" class="btn btn-link link-underline link-underline-opacity-0">
                   <svg
                     data-encore-id="icon"
                     role="img"
@@ -1666,10 +1192,7 @@
                     ></path>
                   </svg>
                 </button>
-                <button
-                  id="repeat"
-                  class="btn btn-link link-underline link-underline-opacity-0"
-                >
+                <button id="repeat" class="btn btn-link link-underline link-underline-opacity-0">
                   <svg
                     data-encore-id="icon"
                     role="img"
@@ -1686,18 +1209,15 @@
                   </svg>
                 </button>
               </div>
-              <div
-                class="d-flex justify-content-center align-items-center gap-2"
-              >
+              <div class="d-flex justify-content-center align-items-center gap-2">
                 <span id="current-time" class="text-secondary">0:00</span>
                 <div
-                  class="progress"
+                  class="progress song-progress-bar"
                   role="progressbar"
                   aria-label="Basic example"
                   aria-valuenow="50"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  style="height: 3px; width: 500px"
                 >
                   <div class="progress-bar bg-success" style="width: 50%"></div>
                 </div>
@@ -1705,9 +1225,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 d-flex align-items-center justify-content-end">
-            <div class="me-3">
-              <div class="d-flex align-items-center gap-3">
+          <div class="col-lg-3">
+            <div class="me-3 mt-5">
+              <div class="d-flex justify-content-end align-items-center gap-3">
                 <div>
                   <svg
                     data-encore-id="icon"
@@ -1755,9 +1275,7 @@
                     <path
                       d="M6 2.75C6 1.784 6.784 1 7.75 1h6.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15h-6.5A1.75 1.75 0 0 1 6 13.25V2.75zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h6.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25h-6.5zm-6 0a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25H4V11H1.75A1.75 1.75 0 0 1 0 9.25v-6.5C0 1.784.784 1 1.75 1H4v1.5H1.75zM4 15H2v-1.5h2V15z"
                     ></path>
-                    <path
-                      d="M13 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-1-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
-                    ></path>
+                    <path d="M13 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-1-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
                   </svg>
                 </div>
                 <div>
@@ -1776,24 +1294,19 @@
                     <path
                       d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z"
                     ></path>
-                    <path
-                      d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"
-                    ></path>
+                    <path d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"></path>
                   </svg>
                 </div>
                 <div
+                  id="volume-progress-bar"
                   class="progress"
                   role="progressbar"
                   aria-label="Basic example"
                   aria-valuenow="25"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  style="width: 90px; height: 3px"
                 >
-                  <div
-                    class="progress-bar bg-success"
-                    style="width: 100%"
-                  ></div>
+                  <div class="progress-bar bg-success" style="width: 100%"></div>
                 </div>
                 <div>
                   <svg
@@ -1865,7 +1378,7 @@
 
         const cards = document.querySelectorAll(".musica-card");
 
-        cards.forEach((card) => {
+        cards.forEach(card => {
           const randomColor = colors[Math.floor(Math.random() * colors.length)];
           card.style.backgroundColor = randomColor;
         });
@@ -1884,5 +1397,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="./assets/script/library.js"></script>
   </body>
 </html>
