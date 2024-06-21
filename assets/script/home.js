@@ -16,6 +16,8 @@ const get = async artist => {
   }
 };
 
+let audio = new Audio();
+
 /* generatore di sezioni */
 const sectionGen = async id => {
   const obj = await get(id);
@@ -102,8 +104,88 @@ const sectionGen = async id => {
         break;
     }
 
+    const playBtn = document.createElement("button");
+    playBtn.className = "btn play-btn position-absolute bottom-0 end-0 p-3 bg-success rounded-circle";
+
+    const pauseBtn = document.createElement("button");
+    pauseBtn.className = "btn play-btn position-absolute bottom-0 end-0 p-3 bg-success rounded-circle";
+
+    // Crea l'elemento SVG
+    const playSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    playSvg.setAttribute("data-encore-id", "icon");
+    playSvg.setAttribute("role", "img");
+    playSvg.setAttribute("aria-hidden", "true");
+    playSvg.setAttribute("viewBox", "0 0 24 24");
+    playSvg.classList.add("Svg-sc-ytk21e-0", "bneLcE");
+    playSvg.setAttribute("width", "50");
+    playSvg.setAttribute("fill", "black");
+    playSvg.setAttribute("width", "24");
+    playSvg.setAttribute("height", "24");
+
+    // Crea l'elemento path e imposta l'attributo 'd'
+    const svgPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    svgPath.setAttribute(
+      "d",
+      "m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+    );
+
+    // Crea l'elemento SVG
+    const pauseSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    pauseSvg.setAttribute("data-encore-id", "icon");
+    pauseSvg.setAttribute("role", "img");
+    pauseSvg.setAttribute("aria-hidden", "true");
+    pauseSvg.setAttribute("viewBox", "0 0 24 24");
+    pauseSvg.classList.add("Svg-sc-ytk21e-0", "bneLcE");
+    pauseSvg.setAttribute("width", "24");
+    pauseSvg.setAttribute("height", "24");
+
+    // Crea l'elemento path e imposta l'attributo 'd'
+    const pauseSvgPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    pauseSvgPath.setAttribute(
+      "d",
+      "M5.7 3a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7H5.7zm10 0a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7h-2.6z"
+    );
+
+    // Appendi il path all'elemento SVG
+
+    playSvg.append(svgPath);
+    playBtn.append(playSvg);
+
+    pauseSvg.append(pauseSvgPath);
+    pauseBtn.append(pauseSvg);
+
+    playBtn.onclick = function () {
+      playBtn.remove();
+      albumImgCon.append(pauseBtn);
+      audio.pause();
+      audio = new Audio(currentElement.preview);
+      audio.play();
+      pauseBtn.classList.remove("play-btn");
+      pauseBtn.classList.add("pause-btn");
+
+      const playerImage = document.querySelector("#player .library-img img");
+      playerImage.src = currentElement.album.cover;
+      playerImage.classList.add("flex-shrink-0");
+
+      const playerAnchors = document.querySelectorAll("#player a");
+      playerAnchors.forEach(anchor => anchor.classList.add("line-clamp-1"));
+      playerAnchors[0].innerText = currentElement.title;
+      playerAnchors[0].href = "./album.html?albumId=" + currentElement.album.id;
+      playerAnchors[1].innerText = currentElement.artist.name;
+      playerAnchors[1].href = "./artist.html?artistId=" + currentElement.artist.id;
+    };
+
+    pauseBtn.onclick = function () {
+      audio.pause();
+      pauseBtn.remove();
+      albumImgCon.append(playBtn);
+    };
+
     const albumCard = document.createElement("div");
     albumCard.className = "card border-0 album-main";
+
+    const albumImgCon = document.createElement("div");
+    albumImgCon.className = "position-relative";
 
     const albumImg = document.createElement("img");
     albumImg.className = "card-img-top";
@@ -127,7 +209,8 @@ const sectionGen = async id => {
     albumArtist.href = "./artist.html?artistId=" + currentElement.artist.id;
 
     albumCardBody.append(albumTitle, albumArtist);
-    albumCard.append(albumImg, albumCardBody);
+    albumImgCon.append(albumImg, playBtn);
+    albumCard.append(albumImgCon, albumCardBody);
     albumCardCon.append(albumCard);
     section.append(albumCardCon);
   }

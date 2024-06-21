@@ -12140,14 +12140,14 @@ body {
   overflow-y: scroll;
 }
 
-svg:not(#play svg, .active) {
+svg:not(#play svg, .active, .play-btn svg, .pause-btn svg) {
   fill: #a7a7a7;
 }
-svg:not(#play svg, .active):hover {
+svg:not(#play svg, .active, .play-btn svg, .pause-btn svg):hover {
   fill: white;
   cursor: pointer;
 }
-svg:not(#play svg, .active):active {
+svg:not(#play svg, .active, .play-btn svg, .pause-btn svg):active {
   fill: white;
 }
 
