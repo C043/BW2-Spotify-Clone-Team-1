@@ -140,6 +140,8 @@ const bannerManipulation = async id => {
   const obj = await get(id);
   const data = await obj.data[0];
 
+  const artists = ["sofia-isella"];
+
   const bannerImg = document.querySelector(".banner-img img");
   bannerImg.src = data.album.cover_big;
   bannerImg.alt = data.album.title;
