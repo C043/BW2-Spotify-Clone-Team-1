@@ -31,14 +31,14 @@ const search = async e => {
   row.id = "searchResults";
 
   const relevant = document.createElement("div");
-  relevant.className = "col-6 mt-4";
+  relevant.className = "col-12 col-md-6 mt-4";
 
   const h2 = document.createElement("h2");
   h2.className = "fs-5 fw-bold";
   h2.innerText = "Relevant";
 
   const artistCard = document.createElement("div");
-  artistCard.className = "card rounded py-4 px-3 border-0";
+  artistCard.className = "card rounded py-4 px-3 border-0 d-flex flex-row align-items-center gap-4 d-md-block";
   artistCard.id = "artistCard";
   artistCard.style.height = "264px";
   artistCard.onclick = function () {
@@ -55,6 +55,8 @@ const search = async e => {
   artistImg.src = data[0].artist.picture_big;
   artistImg.alt = data[0].artist.name;
 
+  const infoBox = document.createElement("div");
+
   const artistTitle = document.createElement("a");
   artistTitle.className = "h1 link-underline link-underline-opacity-0 fw-bold fs-3";
   artistTitle.innerText = data[0].artist.name;
@@ -64,14 +66,15 @@ const search = async e => {
   p.innerText = "Artist";
 
   artistImgCon.append(artistImg);
-  artistCard.append(artistImgCon, artistTitle, p);
+  infoBox.append(artistTitle, p);
+  artistCard.append(artistImgCon, infoBox);
   relevant.append(h2, artistCard);
   row.append(relevant);
 
   esplora.append(row);
 
   const songSection = document.createElement("div");
-  songSection.className = "col-6 mt-4";
+  songSection.className = "col-12 col-md-6 mt-4";
 
   const songSectionTitle = document.createElement("h2");
   songSectionTitle.className = "fs-5 fw-bold px-3";

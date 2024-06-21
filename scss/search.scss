@@ -50,6 +50,7 @@ header {
   display: flex;
   align-items: center;
   background-color: #333;
+  border: 1px solid black;
   border-radius: 50px;
   padding: 5px 20px;
   width: 100%;
@@ -74,7 +75,7 @@ header {
   }
 
   &:focus-within {
-    border: 2px solid white;
+    border: 1px solid white;
   }
 }
 
@@ -149,6 +150,17 @@ header {
     font-size: 0.8em;
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #esplora {
+    .row {
+      margin-inline: 50px;
+    }
+    h1 {
+      text-align: center;
     }
   }
 }
