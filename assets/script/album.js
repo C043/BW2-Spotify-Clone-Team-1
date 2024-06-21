@@ -119,9 +119,7 @@ const createTrackCard = obj => {
   artistTrack.innerText = obj.artist.name;
 
   const explicitContainer = document.createElement("div");
-  /* explicit.className = "btn btn-outline-dark text-light ms-2 disabled"; */
-  /* explicit.style = '' */
-  /* explicit.innerText = obj.explicit_lyrics ? 'E' : ''; */
+
 
   const explicit = document.createElement('button')
   explicit.className = 'btn btn-outline-dark'
@@ -221,9 +219,27 @@ function createAlbumCard(obj) {
   albumName.innerText = obj.title;
 
   // Crea l'elemento p per i dati vari
-  const albumData = document.createElement("p");
-  albumData.className = "m-0";
-  albumData.innerText = "dati vari";
+  const albumData = document.createElement("div");
+  albumData.style = "font-size: 15px";
+  albumData.className = 'd-flex align-items-center align-content-center gap-2'
+
+  const imgArtist = document.createElement('img')
+  imgArtist.src = obj.artist.picture_small
+  imgArtist.style = 'width: 30px'
+  imgArtist.className = 'rounded-circle'
+
+  const artistReference = document.createElement('a')
+  artistReference.href = './artist.html?artistId=' + obj.artist.id
+  artistReference.innerText = obj.artist.name
+
+
+
+  albumData.append(imgArtist, artistReference)
+
+
+
+
+
 
   // Appendi il testo al div del testo
   textDiv.appendChild(albumText);
